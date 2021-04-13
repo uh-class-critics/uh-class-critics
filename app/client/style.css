@@ -1,0 +1,14 @@
+.class-critics-background {
+  background-color: #024731;
+  background-size: cover;
+  padding-bottom: 30px;
+}
+
+.body-landing-image {
+  background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
+  background-size: 100%;
+  width: 1920px;
+  height: 1100px;
+  padding-top: 150px;
+}
+
