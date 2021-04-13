@@ -32,20 +32,20 @@ class Landing extends React.Component {
               <Grid.Column width={3}>
                 <Card>
                   <Image src='https://img.freepik.com/free-vector/man-professor-teacher-icon_48369-2696.jpg?size=338&ext=jpg'/>
-                  <Header textAlign='center' attached>Evaluate Professors</Header>
+                  <Header as='h3' textAlign='center' attached>Evaluate Professors</Header>
                 </Card>
               </Grid.Column>
               <Grid.Column width={3}>
                 <Card>
                   <Image src='https://static.vecteezy.com/system/resources/previews/000/214/903/original/man-hands-typing-an-article-on-a-vintage-typewriter-vector.jpg'/>
-                  <Header textAlign='center' attached>Write Reviews</Header>
+                  <Header as='h3' textAlign='center' attached>Write Reviews</Header>
                 </Card>
 
               </Grid.Column>
               <Grid.Column width={3}>
                 <Card>
                   <Image src='https://img.freepik.com/free-vector/man-shows-gesture-great-idea_10045-637.jpg?size=338&ext=jpg&ga=GA1.2.1588707983.1617408000'/>
-                  <Header textAlign='center' attached>Make Better Choices</Header>
+                  <Header as='h3' textAlign='center' attached>Make Better Choices</Header>
                 </Card>
               </Grid.Column>
             </Grid.Row>
