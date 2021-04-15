@@ -12,3 +12,16 @@
   padding-top: 150px;
 }
 
+.login-page {
+  /*background-color: #024731;*/
+  background: url("https://media.discordapp.net/attachments/828880920642977812/831644782451228752/UHMCampusCenter2.png?width=1246&height=701") no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.test {
+  background-color: #024731;
+}
