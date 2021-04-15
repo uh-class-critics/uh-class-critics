@@ -44,11 +44,11 @@ export default class Signin extends React.Component {
     return (
       <Container id="signin-page" className='login-page' fluid>
         <Grid textAlign="center" verticalAlign="middle" centered>
-          <Grid.Column width={3} className='test'>
-            <Header as="h2" textAlign="center" inverted className='test'>
-                Login to UH Class Critics
+          <Grid.Column width={3} className='login-theme'>
+            <Header as="h2" textAlign="center" inverted className='login-theme'>
+                UH Class Critics Login
             </Header>
-            <Segment>
+            <Segment placeholder>
               <Form onSubmit={this.submit}>
                 <Form.Input
                   label="Email"
@@ -73,7 +73,7 @@ export default class Signin extends React.Component {
                 <Form.Button id="signin-form-submit" content="Login"/>
               </Form>
               <Message>
-                <Link to="/signup">Click here to Register</Link>
+                New User? <Link to="/signup">Register Here</Link>
               </Message>
             </Segment>
             {this.state.error === '' ? (

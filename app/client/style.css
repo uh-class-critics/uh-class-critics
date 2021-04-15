@@ -7,8 +7,7 @@
 .body-landing-image {
   background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
   background-size: 100%;
-  width: 1920px;
-  height: 1100px;
+  height: 1050px;
   padding-top: 150px;
 }
 
@@ -22,6 +21,17 @@
   height: 920px;
 }
 
-.test {
+.signup-page {
+  /*background-color: #024731;*/
+  background: url("https://pbs.twimg.com/media/EUt24z-X0AEWHrb?format=jpg&name=large") no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.login-theme, .signup-theme {
   background-color: #024731;
 }
+
