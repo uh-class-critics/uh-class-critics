@@ -7,10 +7,7 @@ class Landing extends React.Component {
     return (
       <Container fluid>
         <Container fluid className='class-critics-background'>
-          <Grid centered>
-            <Grid.Column width={2}>
-              <Image verticalAlign='middle' src="/images/class-critics-logo.png" size='small'/>
-            </Grid.Column>
+          <Grid centered verticalAlign='middle'>
             <Grid.Column verticalAlign='middle' width={4}>
               <Header as='h1' inverted>Welcome to UH Class Critics!</Header>
             </Grid.Column>

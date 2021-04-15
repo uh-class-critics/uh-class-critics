@@ -2,6 +2,8 @@
   background-color: #000000;
   background-size: cover;
   padding-bottom: 30px;
+  padding-top: 30px;
+  margin-top: -10px;
 }
 
 .body-landing-image {
@@ -11,4 +13,3 @@
   height: 1080px;
   padding-top: 150px;
 }
-
