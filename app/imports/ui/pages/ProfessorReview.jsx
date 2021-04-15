@@ -8,31 +8,33 @@ class ProfessorReview extends React.Component {
         <Container fluid centered className='form'>
           <Grid centered verticalAlign='middle' className='enter'>
 
-            <Grid.Column>
-              <Grid.Column textAlign='center' width={0.5}>
+
+              <Grid.Row textAlign='center'>
                 <h>Professor Name:</h>
-              </Grid.Column>
-              <Grid.Column textAlign='center' width={1}>
+              </Grid.Row>
+              <Grid.Row textAlign='center'>
                 <Input placeholder=''/>
-              </Grid.Column>
+              </Grid.Row>
 
-              <Grid.Column textAlign='center' width={0.5}>
+
+              <Grid.Row textAlign='center'>
                 <h>Rate Professor (1-5):</h>
-              </Grid.Column>
-              <Grid.Column textAlign='center' width={1}>
+              </Grid.Row>
+              <Grid.Row textAlign='center'>
                 <Input placeholder=''/>
-              </Grid.Column>
+              </Grid.Row>
 
-              <Grid.Column textAlign='center' width={0.5}>
+
+              <Grid.Row textAlign='center'>
                 <h>Describe the Professor:</h>
-              </Grid.Column>
-              <Grid.Column textAlign='center' width={1}>
+              </Grid.Row>
+              <Grid.Row textAlign='center'>
                 <Form>
                   <TextArea placeholder=''/>
                 </Form>
-              </Grid.Column>
+              </Grid.Row>
 
-            </Grid.Column>
+
           </Grid>
         </Container>
 
