@@ -17,7 +17,7 @@ class ProfessorReview extends React.Component {
                 </Grid.Column>
 
                 <Grid.Column textAlign='center' width={0.5}>
-                  <h>Rate Professor 1-5:</h>
+                  <h>Rate Professor (1-5):</h>
                 </Grid.Column>
                 <Grid.Column textAlign='center' width={1}>
                   <Input placeholder=''/>
