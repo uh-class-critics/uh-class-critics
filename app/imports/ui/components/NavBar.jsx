@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import { withRouter, NavLink } from 'react-router-dom';
-import { Menu, Dropdown,  Image, Button } from 'semantic-ui-react';
+import { Menu, Dropdown, Image, Button } from 'semantic-ui-react';
 import { Roles } from 'meteor/alanning:roles';
 
 /** The NavBar appears at the top of every page. Rendered by the App Layout component. */
 class NavBar extends React.Component {
   render() {
-    const menuStyle = { marginBottom: '10px', backgroundColor: '#024731'};
+    const menuStyle = { marginBottom: '10px', backgroundColor: '#024731' };
     return (
       <Menu style={menuStyle} attached="top" borderless inverted >
         <Menu.Item as={NavLink} activeClassName="" exact to="">
@@ -17,12 +17,12 @@ class NavBar extends React.Component {
             <Button.Content hidden> Home Page</Button.Content>
             <Button.Content visible>
               <Image src='https://cdn.discordapp.com/attachments/828880920642977812/832133131271667722/123131321314142.png'
-                     width = '75' height = '75'/>
+                width = '75' height = '75'/>
             </Button.Content>
           </Button>
         </Menu.Item>
         {this.props.currentUser ? (
-          [<Menu.Item  as={NavLink} activeClassName="active" exact to="/add" key='add'>Browse Professors</Menu.Item>,
+          [<Menu.Item as={NavLink} activeClassName="active" exact to="/add" key='add'>Browse Professors</Menu.Item>,
             <Menu.Item left as={NavLink} activeClassName="active" exact to="/list" key='list'>Browse Courses</Menu.Item>,
             <Menu.Item left as={NavLink} activeClassName="active" exact to="/review" key='review'>Professor Review</Menu.Item>]
         ) : ''}
