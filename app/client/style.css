@@ -13,3 +13,27 @@
   height: 1080px;
   padding-top: 150px;
 }
+
+.login-page {
+  /*background-color: #024731;*/
+  background: url("/images/signin-image.png") no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.signup-page {
+  /*background-color: #024731;*/
+  background: url("/images/signup-image.png") no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.login-theme, .signup-theme {
+  background-color: #024731;
+}
