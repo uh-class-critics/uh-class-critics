@@ -33,8 +33,8 @@ const updateProfileMethod = 'Profiles.update';
  * updated situation specified by the user.
  */
 Meteor.methods({
-  'Profiles.update'({ email, firstName, lastName, title, picture }) {
-    Profiles.collection.update({ email }, { $set: { email, firstName, lastName, title, picture } });
+  'Profiles.update'({ email, firstName, lastName, title, picture, bio }) {
+    Profiles.collection.update({ email }, { $set: { email, firstName, lastName, title, picture, bio } });
   },
 });
 

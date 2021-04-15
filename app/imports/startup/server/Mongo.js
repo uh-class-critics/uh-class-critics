@@ -15,12 +15,12 @@ function createUser(email, role) {
 }
 
 /** Defines a new user and associated profile. Error if user already exists. */
-function addProfile({ firstName, lastName, title, picture, email, role }) {
+function addProfile({ firstName, lastName, title, picture, email, bio, role }) {
   console.log(`Defining profile ${email}`);
   // Define the user in the Meteor accounts package.
   createUser(email, role);
   // Create the profile.
-  Profiles.collection.insert({ firstName, lastName, title, picture, email });
+  Profiles.collection.insert({ firstName, lastName, title, picture, bio, email });
 }
 
 /** Initialize DB if it appears to be empty (i.e. no users defined.) */
