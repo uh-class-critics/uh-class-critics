@@ -5,9 +5,10 @@
 }
 
 .body-landing-image {
-  background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
+  background: no-repeat url("/images/landing-homepage.jpg");
   background-size: 100%;
-  height: 1050px;
+  width: 1920px;
+  height: 1080px;
   padding-top: 150px;
 }
 
