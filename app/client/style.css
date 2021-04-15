@@ -14,7 +14,7 @@
 
 .login-page {
   /*background-color: #024731;*/
-  background: url("https://media.discordapp.net/attachments/828880920642977812/831644782451228752/UHMCampusCenter2.png?width=1246&height=701") no-repeat;
+  background: url("/images/signin-image.png") no-repeat;
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -24,7 +24,7 @@
 
 .signup-page {
   /*background-color: #024731;*/
-  background: url("https://pbs.twimg.com/media/EUt24z-X0AEWHrb?format=jpg&name=large") no-repeat;
+  background: url("/images/signup-image.png") no-repeat;
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
