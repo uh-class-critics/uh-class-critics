@@ -12,3 +12,33 @@
   padding-top: 150px;
 }
 
+/* Custom site-wide CSS */
+
+.bowfolio-green {
+  color:  #376551;
+}
+
+.landing-green-background {
+  background-color: #376551;
+  color: white;
+  padding-top: 20px;
+}
+
+.landing-white-background {
+  background-color: white;
+  color: #376551;
+  padding-top: 20px;
+}
+
+.reset-margins {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.professors-page {
+  background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
+  background-size: cover;
+  width: 1920px;
+  height: 1100px;
+  padding-top: 150px;
+}
