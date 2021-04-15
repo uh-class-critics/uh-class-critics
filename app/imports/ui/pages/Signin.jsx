@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, Redirect } from 'react-router-dom';
 import { Meteor } from 'meteor/meteor';
-import { Container, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
+import { Container, Form, Grid, Header, Message, Segment, Label } from 'semantic-ui-react';
 
 /**
  * Signin page overrides the form’s submit event and call Meteor’s loginWithPassword().
@@ -42,18 +42,18 @@ export default class Signin extends React.Component {
     }
     // Otherwise return the Login form.
     return (
-      <Container id="signin-page">
-        <Grid textAlign="center" verticalAlign="middle" centered columns={2}>
-          <Grid.Column>
-            <Header as="h2" textAlign="center">
-              Login to your account
+      <Container id="signin-page" className='login-page' fluid>
+        <Grid textAlign="center" verticalAlign="middle" centered>
+          <Grid.Column width={3} className='login-theme'>
+            <Header as="h2" textAlign="center" inverted className='login-theme'>
+                UH Class Critics Login
             </Header>
-            <Form onSubmit={this.submit}>
-              <Segment stacked>
+            <Segment placeholder>
+              <Form onSubmit={this.submit}>
                 <Form.Input
                   label="Email"
                   id="signin-form-email"
-                  icon="user"
+                  icon="user circle"
                   iconPosition="left"
                   name="email"
                   type="email"
@@ -70,12 +70,12 @@ export default class Signin extends React.Component {
                   type="password"
                   onChange={this.handleChange}
                 />
-                <Form.Button id="signin-form-submit" content="Submit"/>
-              </Segment>
-            </Form>
-            <Message>
-              <Link to="/signup">Click here to Register</Link>
-            </Message>
+                <Form.Button id="signin-form-submit" content="Login"/>
+              </Form>
+              <Message>
+                New User? <Link to="/signup">Register Here</Link>
+              </Message>
+            </Segment>
             {this.state.error === '' ? (
               ''
             ) : (

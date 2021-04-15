@@ -7,8 +7,31 @@
 .body-landing-image {
   background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
   background-size: 100%;
-  width: 1920px;
-  height: 1100px;
+  height: 1050px;
   padding-top: 150px;
+}
+
+.login-page {
+  /*background-color: #024731;*/
+  background: url("https://media.discordapp.net/attachments/828880920642977812/831644782451228752/UHMCampusCenter2.png?width=1246&height=701") no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.signup-page {
+  /*background-color: #024731;*/
+  background: url("https://pbs.twimg.com/media/EUt24z-X0AEWHrb?format=jpg&name=large") no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.login-theme, .signup-theme {
+  background-color: #024731;
 }
 
