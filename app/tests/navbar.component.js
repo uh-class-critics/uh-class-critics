@@ -17,29 +17,10 @@ class NavBar {
     await testController.click('#login-dropdown-sign-in');
   }
 
-  async gotoProfilesPage(testController) {
-    await testController.click('#profilesMenuItem');
-  }
-
-  async gotoInterestsPage(testController) {
-    await testController.click('#interestsMenuItem');
-  }
-
-  async gotoProjectsPage(testController) {
-    await testController.click('#projectsMenuItem');
-  }
-
-  async gotoAddProjectPage(testController) {
-    await testController.click('#addProjectMenuItem');
-  }
-
-  async gotoFilterPage(testController) {
-    await testController.click('#filterMenuItem');
-  }
-
   /** Check that the specified user is currently logged in. */
   async isLoggedIn(testController, username) {
-    await testController.expect(Selector('#navbar-current-user').innerText).eql(username);
+    const loggedInUser = Selector('#navbar-current-user').innerText;
+    await testController.expect(loggedInUser).eql(username);
   }
 
   /** Check that someone is logged in, then click items to logout. */
