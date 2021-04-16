@@ -13,6 +13,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Profiles from '../pages/Profiles';
 import ProfessorReview from '../pages/ProfessorReview';
+import Courses from '../pages/ListCourses';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -29,6 +30,7 @@ class App extends React.Component {
               <Route path="/signup" component={Signup}/>
               <Route path="/signout" component={Signout}/>
               <ProtectedRoute path="/review" component= {ProfessorReview}/>
+              <ProtectedRoute path="/courses" component= {ListCourses}/>
               <Route component={NotFound}/>
             </Switch>
           </div>
