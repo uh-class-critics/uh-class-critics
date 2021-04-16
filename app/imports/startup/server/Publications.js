@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Profiles } from '../../api/profiles/Profiles';
+import { Courses} from '../../api/courses/Courses';
 
 // User-level publication.
 Meteor.publish(Profiles.userPublicationName, function () {
@@ -11,10 +12,25 @@ Meteor.publish(Profiles.userPublicationName, function () {
   return this.ready();
 });
 
+Meteor.publish(Courses.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Courses.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
 // Recommended code to publish roles for each user.
 Meteor.publish(Profiles.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Profiles.collection.find();
+  }
+  return this.ready();
+});
+
+Meteor.publish(Courses.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Courses.collection.find();
   }
   return this.ready();
 });

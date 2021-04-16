@@ -2,6 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
 import { Profiles } from '../../api/profiles/Profiles';
+import { Courses } from '../../api/courses/Courses';
 
 /* eslint-disable no-console */
 
@@ -12,6 +13,11 @@ function createUser(email, role) {
     Roles.createRole(role, { unlessExists: true });
     Roles.addUsersToRoles(userID, 'admin');
   }
+}
+
+function addCourse(data) {
+  console.log(`  Adding: ${data.professor} (${data.owner})`);
+  Courses.collection.insert(data);
 }
 
 /** Defines a new user and associated profile. Error if user already exists. */
@@ -33,6 +39,13 @@ if (Meteor.users.find().count() === 0) {
   }
 }
 
+// Initialize the StuffsCollection if empty.
+if (Courses.collection.find().count() === 0) {
+  if (Meteor.settings.defaultCourses) {
+    console.log('Creating default courses.');
+    Meteor.settings.defaultCourses.map(data => addCourses(data));
+  }
+}
 /**
  * If the loadAssetsFile field in settings.development.json is true, then load the data in private/data.json.
  * This approach allows you to initialize your system with large amounts of data.
