@@ -4,7 +4,7 @@ import { Container, Header, Loader, Card } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import CourseAdmin from '../components/CourseAdmin';
-import { Courses } from '../../api/courses/Courses';
+import { Courses } from '../../api/course/Courses';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListCoursesAdmin extends React.Component {

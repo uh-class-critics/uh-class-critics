@@ -5,7 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Course from '../components/Course';
 
-import { Courses } from '../../api/courses/Courses';
+import { Courses } from '../../api/course/Courses';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListCourses extends React.Component {

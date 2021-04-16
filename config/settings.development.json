@@ -11,8 +11,8 @@
     { "name": "Boogie Board", "quantity": 2, "owner": "admin@foo.com", "condition": "excellent" }
   ],
   "defaultCourses": [{
-    "courseName": "Philip", "professor": "Johnson", "owner": "john@foo.com",
-    "review": "I am a Professor of Information and Computer Sciences at the University of Hawaii, Director of the Collaborative Software Development Laboratory, and the CEO of OpenPowerQuality.com."
+    "courseName": "ICS 314", "professor": "Philip Johnson", "owner": "john@foo.com",
+    "review": "I learned a lot about software engineering in this course."
   },
     {
       "courseName": "John", "professor": "Green", "owner": "admin@foo.com",

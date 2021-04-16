@@ -13,7 +13,7 @@ import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import Profiles from '../pages/Profiles';
 import ProfessorReview from '../pages/ProfessorReview';
-import Courses from '../pages/ListCourses';
+import ListCourses from '../pages/ListCourses';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
