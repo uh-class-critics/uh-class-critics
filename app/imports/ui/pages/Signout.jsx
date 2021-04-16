@@ -9,8 +9,8 @@ export default class Signout extends React.Component {
     return (
       <Container fluid>
         <Container fluid className='signout-background'>
-          <Grid className='signout-card' centered>
-            <Grid.Column width={3}>
+          <Grid centered>
+            <Grid.Column width={3} className='signout-card'>
               <Card>
                 <Image src='/images/signout-card.jpg'/>
                 <Header as='h3' textAlign='center' attached><p>Successfully signed off.</p>

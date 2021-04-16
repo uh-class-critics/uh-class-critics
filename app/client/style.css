@@ -44,6 +44,10 @@
   margin-top: -30px;
 }
 
+.signout-card{
+  margin-top: 325px;
+}
+
 .login-theme, .signup-theme {
   background-color: #024731;
 }
