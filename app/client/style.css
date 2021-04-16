@@ -1,7 +1,8 @@
 .class-critics-background {
   background-color: #000000;
   background-size: cover;
-  padding-bottom: 30px;
+  margin-top: -30px;
+
 }
 
 .body-landing-image {
@@ -10,6 +11,8 @@
   width: 1920px;
   height: 1080px;
   padding-top: 150px;
+  margin-bottom: -40px;
+  margin-top: 10px;
 }
 
 .login-page {
@@ -18,7 +21,8 @@
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-top: -10px;
+  margin-top: -30px;
+  margin-bottom: -30px;
   height: 920px;
 }
 
@@ -28,7 +32,8 @@
   background-size: cover;
   padding-top: 200px;
   padding-bottom: 200px;
-  margin-top: -10px;
+  margin-top: -30px;
+  margin-bottom: -30px;
   height: 920px;
 }
 
