@@ -15,18 +15,18 @@ function createUser(email, role) {
 }
 
 /** Defines a new user and associated profile. Error if user already exists. */
-function addProfile({ firstName, lastName, title, picture, email, bio, role }) {
+function addProfile({ firstName, lastName, title, picture, email, role, bio }) {
   console.log(`Defining profile ${email}`);
   // Define the user in the Meteor accounts package.
   createUser(email, role);
   // Create the profile.
-  Profiles.collection.insert({ firstName, lastName, title, picture, bio, email });
+  Profiles.collection.insert({ firstName, lastName, title, picture, email, bio });
 }
 
 /** Initialize DB if it appears to be empty (i.e. no users defined.) */
 if (Meteor.users.find().count() === 0) {
   if (Meteor.settings.defaultProfiles) {
-    console.log('Creating default profiles');
+    console.log('Creating the default profiles');
     Meteor.settings.defaultProfiles.map(profile => addProfile(profile));
   } else {
     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');

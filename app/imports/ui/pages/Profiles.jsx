@@ -1,6 +1,6 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Loader, Card, Image } from 'semantic-ui-react';
+import { Container, Loader, Card, Image, Rating, Header } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
@@ -10,19 +10,27 @@ import { Profiles } from '../../api/profiles/Profiles';
 /** Returns the Profile and associated Projects and Interests associated with the passed user email. */
 function getProfilesData(email) {
   const data = Profiles.collection.findOne({ email });
-  /* console.log(_.extend({ }, data, { interests })); */
   return _.extend({ }, data);
 }
 
 /** Component for layout out a Profile Card. */
 const MakeCard = (props) => (
-  <Card size="small">
+  <Card centered className="profile-professors">
     <Card.Content>
       <Image as={NavLink} exact to="/john" src={props.profile.picture} />
       <Card.Header>{props.profile.firstName} {props.profile.lastName}</Card.Header>
       <Card.Meta>
         <span className='date'>{props.profile.title}</span>
       </Card.Meta>
+      <Card.Meta>
+        <Rating icon='star' defaultRating={4} maxRating={5} />
+      </Card.Meta>
+    </Card.Content>
+    <Card.Content extra>
+      <Header as='h5'>Courses</Header>
+      <Card.Description>
+        {props.profile.bio}
+      </Card.Description>
     </Card.Content>
   </Card>
 );
@@ -44,7 +52,7 @@ class ProfilesPage extends React.Component {
     const emails = _.pluck(Profiles.collection.find().fetch(), 'email');
     const profileData = emails.map(email => getProfilesData(email));
     return (
-      <Container id="profiles-page" className="professors-page" fluid>
+      <Container centered fluid id="profiles-page" className="professors-page">
         <Card.Group>
           {_.map(profileData, (profile, index) => <MakeCard key={index} profile={profile}/>)}
         </Card.Group>
