@@ -17,14 +17,14 @@ class Landing extends React.Component {
           </Grid>
         </Container>
 
-        <Container fluid centered className='body-landing-image'>
+        <Container fluid className='body-landing-image'>
           <Grid centered verticalAlign='middle' className='body-grid'>
             <Grid.Row>
               <Grid.Column textAlign='center' width={2}>
-                <Button color='white' size='huge' as={NavLink} exact to="/signin">Log In</Button>
+                <Button size='huge' as={NavLink} exact to="/signin">Log In</Button>
               </Grid.Column>
               <Grid.Column textAlign='center' width={2}>
-                <Button color='white' size='huge' as={NavLink} exact to="/signup">Sign Up</Button>
+                <Button size='huge' as={NavLink} exact to="/signup">Sign Up</Button>
               </Grid.Column>
             </Grid.Row>
 

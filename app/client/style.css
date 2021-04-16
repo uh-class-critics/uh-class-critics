@@ -1,3 +1,5 @@
+/* landing, signin, signup page */
+
 .class-critics-background {
   background-color: #000000;
   background-size: cover;
@@ -41,4 +43,32 @@
   padding-bottom: 50px;
   background-color: #024731;
   color: white;
+}
+/* profiles page */
+
+.bowfolio-green {
+  color:  #376551;
+}
+
+.landing-green-background {
+  background-color: #376551;
+  color: white;
+}
+
+.landing-white-background {
+  background-color: white;
+  color: #376551;
+}
+
+.reset-margins {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.professors-page {
+  background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
+  background-size: cover;
+  width: 1920px;
+  height: 1100px;
+  padding-top: 150px;
 }
