@@ -1,44 +1,44 @@
 .class-critics-background {
-  background-color: #024731;
+  background-color: #000000;
   background-size: cover;
   padding-bottom: 30px;
 }
 
 .body-landing-image {
-  background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
+  background: no-repeat url("/images/landing-homepage.jpg");
   background-size: 100%;
   width: 1920px;
-  height: 1100px;
+  height: 1080px;
   padding-top: 150px;
 }
 
-/* Custom site-wide CSS */
-
-.bowfolio-green {
-  color:  #376551;
-}
-
-.landing-green-background {
-  background-color: #376551;
-  color: white;
-  padding-top: 20px;
-}
-
-.landing-white-background {
-  background-color: white;
-  color: #376551;
-  padding-top: 20px;
-}
-
-.reset-margins {
-  margin-top: 0;
-  margin-bottom: 0;
-}
-
-.professors-page {
-  background: url("https://pbs.twimg.com/media/EUt25qrXkAMqH3V?format=jpg&name=large") no-repeat;
+.login-page {
+  /*background-color: #024731;*/
+  background: url("/images/signin-page.png") no-repeat;
   background-size: cover;
-  width: 1920px;
-  height: 1100px;
-  padding-top: 150px;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.signup-page {
+  /*background-color: #024731;*/
+  background: url("/images/signup-page.png") no-repeat;
+  background-size: cover;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-top: -10px;
+  height: 920px;
+}
+
+.login-theme, .signup-theme {
+  background-color: #024731;
+}
+
+.footer {
+  padding-top: 20px;
+  padding-bottom: 50px;
+  background-color: #024731;
+  color: white;
 }
