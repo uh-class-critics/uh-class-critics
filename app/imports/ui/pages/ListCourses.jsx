@@ -21,7 +21,7 @@ class ListCourses extends React.Component {
         <Container>
           <Header as="h2" textAlign="center" inverted>List Courses</Header>
           <Card.Group>
-            {this.props.courses.map((contact, index) => <Course key={index} course={course}/>)}
+            {this.props.courses.map((course, index) => <Course key={index} course={course}/>)}
           </Card.Group>
         </Container>
     );
