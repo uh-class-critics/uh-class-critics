@@ -7,14 +7,14 @@ import { withRouter } from 'react-router-dom';
 class Course extends React.Component {
   render() {
     return (
-        <Card centered>
-          <Card.Content>
-            <Card.Header>{this.props.course.courseName} {this.props.course.professor}</Card.Header>
-            <Card.Description>
-              {this.props.course.review}
-            </Card.Description>
-          </Card.Content>
-        </Card>
+      <Card centered>
+        <Card.Content>
+          <Card.Header>{this.props.course.courseName} {this.props.course.professor}</Card.Header>
+          <Card.Description>
+            {this.props.course.review}
+          </Card.Description>
+        </Card.Content>
+      </Card>
     );
   }
 }

@@ -7,18 +7,18 @@ import { withRouter } from 'react-router-dom';
 class CourseAdmin extends React.Component {
   render() {
     return (
-        <Card centered>
-          <Card.Content>
-            <Card.Header>{this.props.course.courseName} {this.props.course.professor}</Card.Header>
-            <Card.Description>
-              {this.props.course.review}
-            </Card.Description>
-          </Card.Content>
+      <Card centered>
+        <Card.Content>
+          <Card.Header>{this.props.course.courseName} {this.props.course.professor}</Card.Header>
+          <Card.Description>
+            {this.props.course.review}
+          </Card.Description>
+        </Card.Content>
 
-          <Card.Content extra>
-            {this.props.course.owner}
-          </Card.Content>
-        </Card>
+        <Card.Content extra>
+          {this.props.course.owner}
+        </Card.Content>
+      </Card>
     );
   }
 }

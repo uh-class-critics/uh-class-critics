@@ -17,12 +17,12 @@ class ListCoursesAdmin extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-        <Container>
-          <Header as="h2" textAlign="center" inverted>List Courses (Admin)</Header>
-          <Card.Group>
-            {this.props.courses.map((course, index) => <CourseAdmin key={index} course={course} />)}
-          </Card.Group>
-        </Container>
+      <Container>
+        <Header as="h2" textAlign="center" inverted>List Courses (Admin)</Header>
+        <Card.Group>
+          {this.props.courses.map((course, index) => <CourseAdmin key={index} course={course} />)}
+        </Card.Group>
+      </Container>
     );
   }
 }
