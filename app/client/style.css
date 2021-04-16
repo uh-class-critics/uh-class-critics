@@ -2,7 +2,6 @@
   background-color: #000000;
   background-size: cover;
   margin-top: -30px;
-
 }
 
 .body-landing-image {
@@ -35,6 +34,14 @@
   margin-top: -30px;
   margin-bottom: -30px;
   height: 920px;
+}
+.signout-background{
+  background: no-repeat url("/images/Signout-page.jpg");
+  background-size: 100%;
+  width: 1920px;
+  height: 1080px;
+  margin-bottom: -40px;
+  margin-top: -30px;
 }
 
 .login-theme, .signup-theme {
