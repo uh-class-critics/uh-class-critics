@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, Card, Header, Rating, Container, Grid, Icon, Button } from 'semantic-ui-react';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 class Landing extends React.Component {
   render() {
