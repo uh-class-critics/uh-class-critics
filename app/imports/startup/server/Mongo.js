@@ -26,7 +26,7 @@ function addProfile({ firstName, lastName, title, picture, email, bio, role }) {
 /** Initialize DB if it appears to be empty (i.e. no users defined.) */
 if (Meteor.users.find().count() === 0) {
   if (Meteor.settings.defaultProfiles) {
-    console.log('Creating the default profiles');
+    console.log('Creating default profiles');
     Meteor.settings.defaultProfiles.map(profile => addProfile(profile));
   } else {
     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');

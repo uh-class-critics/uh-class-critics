@@ -16,7 +16,7 @@ function getProfilesData(email) {
 
 /** Component for layout out a Profile Card. */
 const MakeCard = (props) => (
-  <Card centered size="small">
+  <Card size="small">
     <Card.Content>
       <Image as={NavLink} exact to="/john" src={props.profile.picture} />
       <Card.Header>{props.profile.firstName} {props.profile.lastName}</Card.Header>
@@ -44,7 +44,7 @@ class ProfilesPage extends React.Component {
     const emails = _.pluck(Profiles.collection.find().fetch(), 'email');
     const profileData = emails.map(email => getProfilesData(email));
     return (
-      <Container centered fluid id="profiles-page" className="professors-page">
+      <Container id="profiles-page" className="professors-page" fluid>
         <Card.Group>
           {_.map(profileData, (profile, index) => <MakeCard key={index} profile={profile}/>)}
         </Card.Group>
