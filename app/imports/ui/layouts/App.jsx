@@ -12,7 +12,7 @@ import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
 import ProfessorReview from '../pages/ProfessorReview';
-import Professors from '../pages/Professors';
+import Profiles from '../pages/Profiles';
 import ListCourses from '../pages/ListCourses';
 import ProfessorOverview from '../pages/ProfessorOverview';
 
@@ -26,7 +26,7 @@ class App extends React.Component {
           <div style={{ paddingTop: '20px', paddingBottom: '30px' }}>
             <Switch>
               <Route exact path="/" component={Landing}/>
-              <ProtectedRoute path="/professors" component={Professors}/>
+              <ProtectedRoute path="/professors" component={Profiles}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/signout" component={Signout}/>
