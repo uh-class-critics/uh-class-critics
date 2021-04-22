@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, Card, Header, Rating, Container, Grid, Icon, Button } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
-class Landing extends React.Component {
+class ProfessorOverview extends React.Component {
   render() {
     return (
       <div className="overviewbg">
@@ -73,4 +73,4 @@ class Landing extends React.Component {
   }
 }
 
-export default Landing;
+export default ProfessorOverview;
