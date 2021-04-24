@@ -1,10 +1,10 @@
 import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Courses } from '../../api/course/Courses';
-import { Profiles } from '../../api/profiles/Profiles';
+import { Professors } from '../../api/professors/Professors';
 
 /** Define a publication to publish all profiles. */
-Meteor.publish(Profiles.userPublicationName, () => Profiles.collection.find());
+Meteor.publish(Professors.userPublicationName, () => Professors.collection.find());
 
 Meteor.publish(Courses.userPublicationName, function () {
   if (this.userId) {

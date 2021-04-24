@@ -19,7 +19,7 @@
     { "email": "john@foo.com", "password": "changeme" }
   ],
 
-  "defaultProfiles": [
+  "defaultProfessors": [
     {
       "firstName": "Philip",
       "lastName": "Johnson",

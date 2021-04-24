@@ -1,5 +1,5 @@
 import { Meteor } from 'meteor/meteor';
-import { Profiles } from '../../api/profiles/Profiles';
+import { Professors } from '../../api/professors/Professors';
 
 /**
  * In Bowfolios, insecure mode is enabled, so it is possible to update the server's Mongo database by making
@@ -25,7 +25,7 @@ import { Profiles } from '../../api/profiles/Profiles';
  * back if any of the intermediate updates failed. Left as an exercise to the reader.
  */
 
-const updateProfileMethod = 'Profiles.update';
+const updateProfessorMethod = 'Professors.update';
 
 /**
  * The server-side Profiles.update Meteor Method is called by the client-side Home page after pushing the update button.
@@ -33,9 +33,9 @@ const updateProfileMethod = 'Profiles.update';
  * updated situation specified by the user.
  */
 Meteor.methods({
-  'Profiles.update'({ email, firstName, lastName, title, picture, bio }) {
-    Profiles.collection.update({ email }, { $set: { email, firstName, lastName, title, picture, bio } });
+  'Professors.update'({ email, firstName, lastName, title, picture, bio }) {
+    Professors.collection.update({ email }, { $set: { email, firstName, lastName, title, picture, bio } });
   },
 });
 
-export { updateProfileMethod };
+export { updateProfessorMethod };

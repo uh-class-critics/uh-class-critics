@@ -1,25 +1,25 @@
 import { Meteor } from 'meteor/meteor';
 import { Accounts } from 'meteor/accounts-base';
 import { Roles } from 'meteor/alanning:roles';
-import { Profiles } from '../../api/profiles/Profiles';
+import { Professors } from '../../api/professors/Professors';
 import { Courses } from '../../api/course/Courses';
 
 /* eslint-disable no-console */
 
 /** Defines a new user and associated profile. Error if user already exists. */
-function addProfile({ firstName, lastName, title, picture, email, bio }) {
-  console.log(`Defining profile ${email}`);
+function addProfessor({ firstName, lastName, title, picture, email, bio }) {
+  console.log(`Defining professor ${email}`);
   // Define the user in the Meteor accounts package.
   /** createUser(email, role); * */
   // Create the profile.
-  Profiles.collection.insert({ firstName, lastName, title, picture, email, bio });
+  Professors.collection.insert({ firstName, lastName, title, picture, email, bio });
 }
 
 /** Initialize DB if it appears to be empty (i.e. no users defined.) */
 if (Meteor.users.find().count() === 0) {
-  if (Meteor.settings.defaultProfiles) {
+  if (Meteor.settings.defaultProfessors) {
     console.log('Creating the default profiles');
-    Meteor.settings.defaultProfiles.map(profile => addProfile(profile));
+    Meteor.settings.defaultProfessors.map(professor => addProfessor(professor));
   } else {
     console.log('Cannot initialize the database!  Please invoke meteor with a settings file.');
   }
