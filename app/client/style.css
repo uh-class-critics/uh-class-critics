@@ -70,3 +70,15 @@
   margin-top: 10px;
 }
 
+.professor-header {
+  letter-spacing: 5px;
+  margin-bottom: 100px;
+}
+
+.professor-main {
+  background-color: whitesmoke;
+  margin: -30px;
+  padding: 80px;
+
+}
+

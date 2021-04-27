@@ -6,7 +6,6 @@ import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
 import { Link, NavLink } from 'react-router-dom';
 import { Professors } from '../../api/professors/Professors';
-import Sort from '../components/Sort';
 
 /** Returns the Profile and associated Projects and Interests associated with the passed user email. */
 function getProfessorsData(email) {
@@ -57,7 +56,6 @@ class ProfessorsPage extends React.Component {
 
     return (
       <Container centered fluid id="profiles-page" className="professors-page">
-        <Sort id='interests' name='interests' showInlineError={true} placeholder={'Interests'}/>
         <Card.Group>
           {_.map(professorData, (professor, index) => <MakeCard key={index} professor={professor}/>)}
         </Card.Group>
