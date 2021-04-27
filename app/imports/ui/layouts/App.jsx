@@ -16,6 +16,7 @@ import Profiles from '../pages/ListProfessors';
 import ListCourses from '../pages/ListCourses';
 import ProfessorOverview from '../pages/ProfessorOverview';
 import MainPageProfessor from '../pages/MainPageProfessor';
+import LandingUser from '../pages/LandingUser';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -27,6 +28,7 @@ class App extends React.Component {
           <div style={{ paddingTop: '20px', paddingBottom: '30px' }}>
             <Switch>
               <Route exact path="/" component={Landing}/>
+              <ProtectedRoute path="/User" component={LandingUser}/>
               <ProtectedRoute path="/professors" component={Profiles}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>

@@ -9,7 +9,17 @@
   background-size: 100%;
   width: 1920px;
   height: 1080px;
-  padding-top: 150px;
+  padding-top: 175px;
+  margin-bottom: -40px;
+  margin-top: -35px;
+}
+
+.body-landing-image-user {
+  background: no-repeat url("/images/landing-user.jpg");
+  background-size: 100%;
+  width: 1920px;
+  height: 1080px;
+  padding-top: 175px;
   margin-bottom: -40px;
   margin-top: 10px;
 }

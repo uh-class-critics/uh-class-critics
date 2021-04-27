@@ -12,7 +12,7 @@ class NavBar extends React.Component {
     const menuStyle = { marginBottom: '10px', backgroundColor: '#024731' };
     return (
       <Menu style={menuStyle} attached="top" borderless inverted>
-        <Menu.Item as={NavLink} activeClassName="" exact to="">
+        <Menu.Item as={NavLink} exact to="/User">
           <Button className='button' animated color ='black'>
             <Button.Content hidden> Home Page</Button.Content>
             <Button.Content visible>
