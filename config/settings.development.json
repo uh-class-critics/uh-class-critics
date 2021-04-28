@@ -25,16 +25,7 @@
       "lastName": "Johnson",
       "bio": "ICS 314 Software Engineering I, ICS 491: Special Topics.",
       "title": "Professor",
-      "interests": [
-        "Software Engineering",
-        "Climate Change"
-      ],
-      "projects":[
-        "RadGrad",
-        "Open Power Quality"
-      ],
       "courses": "ICS 321",
-
       "picture": "https://philipmjohnson.github.io/images/philip2.jpeg",
       "email": "johnson@hawaii.edu"
     },
@@ -43,13 +34,6 @@
       "lastName": "Casanova",
       "bio": "ICS 312 Machine-Level and Systems Programming, ICS 332 Operating Systems, ICS 332 Operating Systems",
       "title": "Professor",
-      "interests": [
-        "HPC",
-        "Distributed Computing"
-      ],
-      "projects":[
-        "WRENCH"
-      ],
       "picture": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Henri_Casanova1.jpg",
       "email": "henric@hawaii.edu"
     },
@@ -58,13 +42,6 @@
       "lastName": "Moore",
       "bio": "ICS 211 Intro to Computer Science II, ICS 314 Software Engineering I.",
       "title": "Assistant Professor",
-      "interests": [
-        "Software Engineering",
-        "Renewable Energy"
-      ],
-      "projects":[
-        "RadGrad"
-      ],
       "picture": "https://cammoore.github.io/images/cam-moore.jpg",
       "email": "cmoore@hawaii.edu"
     },
@@ -73,12 +50,6 @@
       "lastName": "Leigh",
       "bio": "ICS 111 Intro to Computer Science I, ICS 685 Virtual and Augmented Reality.",
       "title": "Professor",
-      "interests": [
-        "Visualization"
-      ],
-      "projects":[
-        "Cyber Canoe"
-      ],
       "picture": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Jason_Leigh-2014.jpg",
       "email": "leighj@hawaii.edu"
     },
@@ -87,12 +58,6 @@
       "lastName": "Baek",
       "bio": "ICS 241 Discrete Mathematics II, CS 483 Computer Vision.",
       "title": "Associate Professor",
-      "interests": [
-        "Scalable IP Networks"
-      ],
-      "projects":[
-        "Open Power Quality"
-      ],
       "picture": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/Kyungim_Baek1.jpg",
       "email": "kyungim@hawaii.edu"
     },
@@ -101,12 +66,6 @@
       "lastName": "Bisted",
       "bio": "ICS 313 Programming Language Theory.",
       "title": "Professor",
-      "interests": [
-        "Scalable IP Networks"
-      ],
-      "projects":[
-        "Open Power Quality"
-      ],
       "picture": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/kim_binsted-square-300x300.jpg",
       "email": "binsted@hawaii.edu"
     },
@@ -115,12 +74,6 @@
       "lastName": "Narayan",
       "bio": "ICS 212: Program Structure, ICS 332: Operating Systems.",
       "title": "Professor",
-      "interests": [
-        "Scalable IP Networks"
-      ],
-      "projects":[
-        "Open Power Quality"
-      ],
       "picture": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Ravi_Narayan-2014.jpg",
       "email": "narayan@hawaii.edu"
     },
@@ -129,83 +82,8 @@
       "lastName": "Sitchinava",
       "bio": "ICS 621: Analysis of Algorithms, ICS 491: Competitive Programming, ICS 443: Parallel Algorithms.",
       "title": "Ph.D. (2020)",
-      "interests": [
-        "Scalable IP Networks"
-      ],
-      "projects":[
-        "Open Power Quality"
-      ],
       "picture": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/Nodari_Sitchinava-2014.jpg",
       "email": "nodari@hawaii.edu"
-    },
-    {
-      "firstName": "Philip",
-      "lastName": "von Doetinchem",
-      "bio": "Most weekends, you can find me on my 8 foot dinghy.",
-      "title": "Associate Professor",
-      "interests": [
-        "Scalable IP Networks"
-      ],
-      "projects":[
-        "Open Power Quality"
-      ],
-      "picture": "https://www.phys.hawaii.edu/wp-content/uploads/2021/01/P.vonDoetinchem.png",
-      "email": "philipvd@hawaii.edu"
-    },
-    {
-      "firstName": "Farzana",
-      "lastName": "Nasrin",
-      "bio": "ICS 241: Calculus I, ICS 372: Elem Probability & Statistics.",
-      "title": "Assistant Professor",
-      "interests": [
-        "Scalable IP Networks"
-      ],
-      "projects":[
-        "Open Power Quality"
-      ],
-      "picture": "http://math.hawaii.edu/home/board/Farzana-Nasrin.jpg",
-      "email": "fnasrin @math.hawaii.edu"
-    }
-  ],
-
-  "defaultProjects": [
-    {
-      "name": "Open Power Quality",
-      "homepage": "https://openpowerquality.org",
-      "description": "Open source hardware and software for distributed power quality data collection, analysis, and visualization.",
-      "interests": [
-        "Software Engineering",
-        "Renewable Energy"
-      ],
-      "picture": "https://avatars0.githubusercontent.com/u/4641939"
-    },
-    {
-      "name": "RadGrad",
-      "homepage": "https://radgrad.org",
-      "description": "Growing awesome computer scientists, one graduate at a time.",
-      "interests": [
-        "Educational Technology"
-      ],
-      "picture": "https://www.radgrad.org/img/radgrad_logo.png"
-    },
-    {
-      "name": "WRENCH",
-      "homepage": "https://wrench-project.org",
-      "description": "WRENCH is an open-source library for developing simulators for large-scale scientific computation",
-      "interests": [
-        "Distributed computing"
-      ],
-      "picture": "https://wrench-project.org/images/logo-vertical.png"
-    },
-    {
-      "name": "Cyber Canoe",
-      "homepage": "http://lava.manoa.hawaii.edu/blog/2014/07/11/cyber-canoe-cyber-infrastructure-enabled-collaborative-analysis-navigation-and-observation-environment/",
-      "description": "Software for Unity projects involving stereoscopic resolution driven by 9 PCs with a GeForce 980 graphics card.",
-      "interests": [
-        "Unity",
-        "Visualization"
-      ],
-      "picture": "https://www.hawaii.edu/its/wp-content/uploads/sites/2/2019/01/LAVAlogo-300x192-300x192.png"
     }
   ],
   "loadAssetsFile":  false

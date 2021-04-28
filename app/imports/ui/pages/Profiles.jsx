@@ -4,7 +4,7 @@ import { Container, Loader, Card, Image, Rating, Header } from 'semantic-ui-reac
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { _ } from 'meteor/underscore';
-import { NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { Profiles } from '../../api/profiles/Profiles';
 
 /** Returns the Profile and associated Projects and Interests associated with the passed user email. */
@@ -17,13 +17,14 @@ function getProfilesData(email) {
 const MakeCard = (props) => (
   <Card centered className="profile-professors">
     <Card.Content>
-      <Image as={NavLink} exact to="/john" src={props.profile.picture} />
+      <Image src={props.profile.picture} />
       <Card.Header>{props.profile.firstName} {props.profile.lastName}</Card.Header>
       <Card.Meta>
         <span className='date'>{props.profile.title}</span>
       </Card.Meta>
       <Card.Meta>
         <Rating icon='star' defaultRating={4} maxRating={5} />
+        <Link to={'/review/'}>Write a Review</Link>
       </Card.Meta>
     </Card.Content>
     <Card.Content extra>
