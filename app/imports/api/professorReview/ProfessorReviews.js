@@ -17,7 +17,6 @@ class ProfessorReviewsCollection {
       professorName: String,
       review: String,
       owner: String,
-      approved: Boolean,
       rating: {
         type: Number,
         allowedValues: [1, 2, 3, 4, 5],
