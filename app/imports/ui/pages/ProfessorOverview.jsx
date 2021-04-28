@@ -1,5 +1,6 @@
 import React from 'react';
-import { Image, Card, Header, Rating, Container, Grid, Icon } from 'semantic-ui-react';
+import { Image, Card, Header, Rating, Container, Grid, Icon, Button } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 class ProfessorOverview extends React.Component {
   render() {
@@ -24,6 +25,9 @@ class ProfessorOverview extends React.Component {
                   <Card.Description>
                     ICS 314 Software Engineering I, ICS 491: Special Topics.
                   </Card.Description>
+                  <Button center as={Link} to='/review'>
+                    Write a Review
+                  </Button>
                 </Card.Content>
               </Card>
             </Grid.Column>
