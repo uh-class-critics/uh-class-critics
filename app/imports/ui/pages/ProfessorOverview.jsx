@@ -25,7 +25,7 @@ class ProfessorOverview extends React.Component {
                   <Card.Description>
                     ICS 314 Software Engineering I, ICS 491: Special Topics.
                   </Card.Description>
-                  <Button center as={Link} to='/review'>
+                  <Button as={Link} to='/review'>
                     Write a Review
                   </Button>
                 </Card.Content>
