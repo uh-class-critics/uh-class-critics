@@ -1,25 +1,25 @@
 import React from 'react';
-import { Segment, Rating } from 'semantic-ui-react';
+import { Segment } from 'semantic-ui-react';
 import { AutoForm, ErrorsField, SubmitField, TextField, HiddenField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import PropTypes from 'prop-types';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
-import { Notes } from '../../api/note/Notes';
+import { Reviews } from '../../api/review/Reviews';
 
-const bridge = new SimpleSchema2Bridge(Notes.schema);
+const bridge = new SimpleSchema2Bridge(Reviews.schema);
 
 /** Renders the Page for adding a document. */
-class AddNote extends React.Component {
+class AddReview extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
     const { note, owner, contactId, createdAt } = data;
-    Notes.collection.insert({ note, owner, contactId, createdAt },
+    Reviews.collection.insert({ note, owner, contactId, createdAt },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Item added successfully', 'success');
+          swal('Success', 'Review sent successfully', 'success');
           formRef.reset();
         }
       });
@@ -32,7 +32,6 @@ class AddNote extends React.Component {
       <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
         <Segment>
           <TextField label="Write a review" name='note'/>
-          <Rating icon='star' defaultRating={3} maxRating={4} />
           <SubmitField value='Submit'/>
           <ErrorsField/>
           <HiddenField name='owner' value={this.props.owner}/>
@@ -44,9 +43,9 @@ class AddNote extends React.Component {
   }
 }
 
-AddNote.propTypes = {
+AddReview.propTypes = {
   owner: PropTypes.string.isRequired,
   contactId: PropTypes.string.isRequired,
 };
 
-export default AddNote;
+export default AddReview;

@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class Note extends React.Component {
+class Review extends React.Component {
   render() {
     return (
       <Feed.Event >
@@ -20,9 +20,9 @@ class Note extends React.Component {
 }
 
 // Require a document to be passed to this component.
-Note.propTypes = {
+Review.propTypes = {
   note: PropTypes.object.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
-export default withRouter(Note);
+export default withRouter(Review);

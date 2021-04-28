@@ -1,31 +1,28 @@
 import React from 'react';
 import { Card, Image, Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
-import Note from './Note';
-import AddNote from './AddNote';
+import { withRouter } from 'react-router-dom';
+import Review from './Review';
+import AddReview from './AddReview';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Contact extends React.Component {
   render() {
     return (
       <Card>
-        <Image floated='right' size='mini' src={this.props.professor.image}/>
+        <Image size='small' src={this.props.professor.image}/>
         <Card.Content>
           <Card.Header>{this.props.professor.firstName} {this.props.professor.lastName}</Card.Header>
           <Card.Meta>{this.props.professor.bio}</Card.Meta>
           <Card.Description>{this.props.professor.title}</Card.Description>
         </Card.Content>
         <Card.Content extra>
-          <Link to={`/edit/${this.props.professor._id}`}>Edit</Link>
-        </Card.Content>
-        <Card.Content extra>
           <Feed>
-            {this.props.notes.map((note, index) => <Note key={index} note={note}/>)}
+            {this.props.notes.map((note, index) => <Review key={index} note={note}/>)}
           </Feed>
         </Card.Content>
         <Card.Content extra>
-          <AddNote owner={this.props.professor.owner} contactId={this.props.professor._id}/>
+          <AddReview owner={this.props.professor.owner} contactId={this.props.professor._id}/>
         </Card.Content>
       </Card>
     );
