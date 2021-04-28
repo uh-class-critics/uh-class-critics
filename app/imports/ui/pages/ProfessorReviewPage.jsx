@@ -29,7 +29,7 @@ class ProfessorReviewPage extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { className, review, rating } = data;
+    const { professorName, review, rating } = data;
     const createdAt = new Date().toDateString();
     const owner = Meteor.user().username;
     const approved = false;
@@ -38,7 +38,7 @@ class ProfessorReviewPage extends React.Component {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Item added successfully', 'success');
+          swal('Success', 'Review added successfully', 'success');
           formRef.reset();
         }
       });
