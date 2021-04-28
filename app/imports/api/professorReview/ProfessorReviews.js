@@ -8,7 +8,7 @@ import { Tracker } from 'meteor/tracker';
 class ProfessorReviewsCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'ClassReviewsCollection';
+    this.name = 'ProfessorReviewsCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
