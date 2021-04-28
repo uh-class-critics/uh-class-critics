@@ -87,5 +87,56 @@
     }
   ],
 
+  "defaultReviews": [
+    {
+      "createdAt": "05/30/20",
+      "professorName": "Philip Johnson",
+      "review": "Easiest Writing Intensive A class you&apos;ll take only requires 3 paragraphs for each essay. WOD&apos;s are not hard and are really similar to the practice WOD&apos;s he gives. Professor basically hands you an A on a silver platter. The professor is a nice guy also and he is willing to help out at any time.",
+      "owner": "john@foo.com",
+      "course": "ICS 314",
+      "rating": "5"
+    },
+    {
+      "createdAt": "01/22/19",
+      "professorName": "Philip Johnson",
+      "review": "Very all or nothing type of grader. His Workout of the day assignments are relentless and unforgiving(100 points each and he will give you a 0/100 if your code isnt perfect). If you plan on trying to get an A in this class, you must know how to code Javascipt like a seasoned software developer.",
+      "owner": "john@foo.com",
+      "course": "ICS 314",
+      "rating": "1"
+    },
+    {
+      "createdAt": "12/21/19",
+      "professorName": "Henri Casanova",
+      "review": "Dont get the raving reviews about him, hes just your average researcher 1st professor 2nd. If you can learn from slides great, otherwise he doesn't provide a clear model of the material hes teaching. This is a combination of him speaking rapidly and cramming everything into his lectures.I cant say the homework or examples prepare you for the exam.",
+      "owner": "john@foo.com",
+      "course": "ICS 332",
+      "rating": "3"
+    },
+    {
+      "createdAt": "09/07/19",
+      "professorName": "Henri Casanova",
+      "review": "Casanova is a very thorough instructor. He provides a lot of information and sometimes it is hard to take it all in, but he's very fair. Just go to office hours for homework help (start assignments early!). Study his slides for quizzes /exams, and you will do fine. Final is a lot like midterm. There is some extra credit opportunity. Do not fall behind!",
+      "owner": "john@foo.com",
+      "course": "ICS 312",
+      "rating": "4"
+    },
+    {
+      "createdAt": "11/01/18",
+      "professorName": "Carleton Moore",
+      "review": "Cam Moore has a talent for explaining concepts quickly and simply, in ways that are easy to absorb and understand. He also is quite helpful, and you can tell he cares that people actually understand the homework.",
+      "owner": "john@foo.com",
+      "course": "ICS 211",
+      "rating": "5"
+    },
+    {
+      "createdAt": "04/05/21",
+      "professorName": "Carleton Moore",
+      "review": "There's a quiz every week, plus two midterms and there's not enough time to complete them. Most coding quizzes I don't get the chance to finish, no matter how well I understand the material since we're only given two minutes. He spends class time going over how to do the homework, which I appreciate. Unless you have friends, you work alone in lab.",
+      "owner": "john@foo.com",
+      "course": "ICS 211",
+      "rating": "3"
+    }
+  ],
+
   "loadAssetsFile":  false
 }
