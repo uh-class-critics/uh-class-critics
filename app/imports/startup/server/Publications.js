@@ -3,7 +3,7 @@ import { Roles } from 'meteor/alanning:roles';
 import { Courses } from '../../api/course/Courses';
 import { Professors } from '../../api/professors/Professors';
 import { Reviews } from '../../api/review/Reviews';
-import { ProfessorReviews} from '../../api/professorReview/ProfessorReviews';
+import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
 Meteor.publish(Professors.userPublicationName, function () {
   if (this.userId) {

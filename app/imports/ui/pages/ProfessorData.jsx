@@ -80,7 +80,6 @@ export default withTracker(() => {
   // Get the ClassReview documents
   const reviews = ProfessorData.collection.find({ className: searchTerm }).fetch();
   return {
-    professorName,
     reviews,
     ready,
   };
