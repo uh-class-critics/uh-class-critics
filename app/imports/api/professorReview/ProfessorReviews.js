@@ -3,7 +3,7 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /**
- * The ProfessorCollection.
+ * The ProfessorReviewsCollection.
  */
 class ProfessorReviewsCollection {
   constructor() {
@@ -13,10 +13,8 @@ class ProfessorReviewsCollection {
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      createdAt: String,
       professorName: String,
       review: String,
-      owner: String,
       course: String,
       rating: {
         type: Number,

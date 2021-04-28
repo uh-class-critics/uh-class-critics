@@ -3,11 +3,20 @@ import { Roles } from 'meteor/alanning:roles';
 import { Courses } from '../../api/course/Courses';
 import { Professors } from '../../api/professors/Professors';
 import { Reviews } from '../../api/review/Reviews';
+import { ProfessorReviews} from '../../api/professorReview/ProfessorReviews';
 
 Meteor.publish(Professors.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
     return Professors.collection.find({ owner: username });
+  }
+  return this.ready();
+});
+
+Meteor.publish(ProfessorReviews.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return ProfessorReviews.collection.find({ owner: username });
   }
   return this.ready();
 });

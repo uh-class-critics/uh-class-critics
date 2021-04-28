@@ -1,6 +1,6 @@
 import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, SelectField, SubmitField, LongTextField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SelectField, SubmitField, LongTextField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
@@ -20,6 +20,7 @@ const formSchema = new SimpleSchema({
     allowedValues: [1, 2, 3, 4, 5],
     defaultValue: 1,
   },
+  course: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -29,10 +30,10 @@ class ProfessorReviewPage extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { professorName, review, rating } = data;
+    const { professorName, review, rating, course } = data;
     const createdAt = new Date().toDateString();
     const owner = Meteor.user().username;
-    ProfessorReviews.collection.insert({ createdAt, professorName, rating, review, owner },
+    ProfessorReviews.collection.insert({ professorName, rating, review, course, owner, createdAt },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -54,6 +55,7 @@ class ProfessorReviewPage extends React.Component {
             <Segment>
               <SelectField name='rating' />
               <SelectField name='professorName' />
+              <TextField name='course'/>
               <LongTextField name='review'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
