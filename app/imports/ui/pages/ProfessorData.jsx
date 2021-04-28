@@ -3,8 +3,6 @@ import { Meteor } from 'meteor/meteor';
 import { Container, Header, Loader, Table } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import ProfessorStuff from '../components/ProfessorStuff';
-import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
 // eslint-disable-next-line no-undef
 const searchTerm = (localStorage.getItem('searchTerm') != null) ? localStorage.getItem('searchTerm') : 'ICS 111';
