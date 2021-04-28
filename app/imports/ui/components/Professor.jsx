@@ -6,7 +6,7 @@ import Review from './Review';
 import AddReview from './AddReview';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
-class Contact extends React.Component {
+class Professor extends React.Component {
   render() {
     return (
       <Card>
@@ -30,10 +30,10 @@ class Contact extends React.Component {
 }
 
 // Require a document to be passed to this component.
-Contact.propTypes = {
+Professor.propTypes = {
   professor: PropTypes.object.isRequired,
   notes: PropTypes.array.isRequired,
 };
 
 // Wrap this component in withRouter since we use the <Link> React Router element.
-export default withRouter(Contact);
+export default withRouter(Professor);
