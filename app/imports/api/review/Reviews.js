@@ -28,6 +28,6 @@ class ReviewsCollection {
 
 /**
  * The singleton instance of the StuffsCollection.
- * @type {ContactsCollection}
+ * @type {ReviewsCollection}
  */
 export const Reviews = new ReviewsCollection();
