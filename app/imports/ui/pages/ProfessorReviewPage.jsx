@@ -7,13 +7,12 @@ import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
-
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   professorName: {
     type: String,
     allowedValues: ['Philip Johnson', 'Baek Kyungim'],
-    defaultValue: 1,
+    defaultValue: 'Philip Johnson',
   },
   review: String,
   rating: {
@@ -34,7 +33,7 @@ class ProfessorReviewPage extends React.Component {
     const createdAt = new Date().toDateString();
     const owner = Meteor.user().username;
     const approved = false;
-    ProfessorReviews.collection.insert({ createdAt, className, rating, review, owner, approved },
+    ProfessorReviews.collection.insert({ createdAt, professorName, rating, review, owner, approved },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
