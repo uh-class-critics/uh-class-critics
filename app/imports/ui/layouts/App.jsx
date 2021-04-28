@@ -17,6 +17,7 @@ import ListCourses from '../pages/ListCourses';
 import ProfessorOverview from '../pages/ProfessorOverview';
 import MainPageProfessor from '../pages/MainPageProfessor';
 import LandingUser from '../pages/LandingUser';
+import NewReview from '../pages/NewReview';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -37,6 +38,7 @@ class App extends React.Component {
               <ProtectedRoute path="/courses" component= {ListCourses}/>
               <ProtectedRoute path="/review" component= {ProfessorReview}/>
               <ProtectedRoute path="/overview" component= {ProfessorOverview}/>
+              <AdminProtectedRoute path="/NewReview" component={NewReview}/>
               <Route component={NotFound}/>
             </Switch>
           </div>
