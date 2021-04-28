@@ -23,7 +23,7 @@ class ListProfessors extends React.Component {
         <Card.Group>
           {this.props.professors.map((professor, index) => <Professor key={index}
             professor={professor}
-            notes={this.props.notes.filter(note => (note.contactId === professor._id))}/>)}
+            notes={this.props.reviews.filter(note => (note.contactId === professor._id))}/>)}
         </Card.Group>
       </Container>
     );
@@ -33,7 +33,7 @@ class ListProfessors extends React.Component {
 // Require an array of Stuff documents in the props.
 ListProfessors.propTypes = {
   professors: PropTypes.array.isRequired,
-  notes: PropTypes.array.isRequired,
+  reviews: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -46,10 +46,10 @@ export default withTracker(() => {
 
   // Get the Stuff documents
   const professors = Professors.collection.find({}).fetch();
-  const notes = Reviews.collection.find({}).fetch();
+  const reviews = Reviews.collection.find({}).fetch();
   return {
     professors,
-    notes,
+    reviews,
     ready: subscription.ready() && subscription2.ready(),
   };
 })(ListProfessors);

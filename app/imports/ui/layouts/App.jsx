@@ -28,14 +28,14 @@ class App extends React.Component {
           <div style={{ paddingTop: '20px', paddingBottom: '30px' }}>
             <Switch>
               <Route exact path="/" component={Landing}/>
-              <ProtectedRoute path="/User" component={LandingUser}/>
-              <ProtectedRoute path="/list" component={ListProfessors}/>
               <Route path="/signin" component={Signin}/>
               <Route path="/signup" component={Signup}/>
               <Route path="/signout" component={Signout}/>
-              <ProtectedRoute path="/review" component= {ProfessorReview}/>
+              <ProtectedRoute path="/User" component={LandingUser}/>
               <ProtectedRoute path="/mainprofessors" component= {MainPageProfessor}/>
+              <ProtectedRoute path="/list" component={ListProfessors}/>
               <ProtectedRoute path="/courses" component= {ListCourses}/>
+              <ProtectedRoute path="/review" component= {ProfessorReview}/>
               <ProtectedRoute path="/overview" component= {ProfessorOverview}/>
               <Route component={NotFound}/>
             </Switch>
