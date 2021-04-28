@@ -57,6 +57,7 @@ class ProfessorReviewPage extends React.Component {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <SelectField name='rating' />
+              <SelectField name='professorName' />
               <LongTextField name='review'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
