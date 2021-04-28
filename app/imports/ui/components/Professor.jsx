@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Image, Feed } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import Review from './Review';
 import AddReview from './AddReview';
 
@@ -12,7 +12,9 @@ class Professor extends React.Component {
       <Card>
         <Image size='small' src={this.props.professor.image}/>
         <Card.Content>
-          <Card.Header>{this.props.professor.firstName} {this.props.professor.lastName}</Card.Header>
+          <Card.Header>
+            <Link to={`/overview/${this.props.professor._id}`}>{this.props.professor.firstName} {this.props.professor.lastName}</Link>
+          </Card.Header>
           <Card.Meta>{this.props.professor.bio}</Card.Meta>
           <Card.Description>{this.props.professor.title}</Card.Description>
         </Card.Content>

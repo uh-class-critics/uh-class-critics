@@ -19,7 +19,7 @@ class ListProfessors extends React.Component {
   renderPage() {
     return (
       <Container>
-        <Header as="h2" textAlign="center" inverted>Professors</Header>
+        <Header as="h2" textAlign="center">Professors</Header>
         <Card.Group>
           {this.props.professors.map((professor, index) => <Professor key={index}
             professor={professor}
