@@ -2,7 +2,7 @@ import { Meteor } from 'meteor/meteor';
 import { Roles } from 'meteor/alanning:roles';
 import { Courses } from '../../api/course/Courses';
 import { Professors } from '../../api/professors/Professors';
-import { Notes } from '../../api/note/Notes';
+import { Reviews } from '../../api/review/Reviews';
 
 Meteor.publish(Professors.userPublicationName, function () {
   if (this.userId) {
@@ -12,10 +12,10 @@ Meteor.publish(Professors.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Notes.userPublicationName, function () {
+Meteor.publish(Reviews.userPublicationName, function () {
   if (this.userId) {
     const username = Meteor.users.findOne(this.userId).username;
-    return Notes.collection.find({ owner: username });
+    return Reviews.collection.find({ owner: username });
   }
   return this.ready();
 });
