@@ -98,7 +98,7 @@
     }
   ],
 
-  "defaultReviews": [
+  "defaultProfessorReviews": [
     {
       "createdAt": "05/30/20",
       "professorName": "Philip Johnson",
