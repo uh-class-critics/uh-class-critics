@@ -15,37 +15,7 @@ const ItemExampleItems = () => (
           </Item>
           <Item.Content>
             <Item.Header>Inf. & Computer Science (ICS)</Item.Header>
-            <Link to={'/professors/'}>Professors</Link>
-          </Item.Content>
-        </Grid.Column>
-
-        <Grid.Column>
-          <Item>
-            <Item.Image circular size='medium' src='https://wallpaperaccess.com/full/895528.jpg' />
-          </Item>
-          <Item.Content>
-            <Item.Header>Mathematics (MATH)</Item.Header>
-            <Link to={'/professors/'}>See professors from this department</Link>
-          </Item.Content>
-        </Grid.Column>
-
-        <Grid.Column>
-          <Item>
-            <Item.Image circular size='medium' src='https://wallpaperaccess.com/full/895528.jpg' />
-          </Item>
-          <Item.Content>
-            <Item.Header>Mathematics (MATH)</Item.Header>
-            <Link to={'/edit/'}>See professors from this department</Link>
-          </Item.Content>
-        </Grid.Column>
-
-        <Grid.Column>
-          <Item>
-            <Item.Image circular size='medium' src='https://wallpaperaccess.com/full/895528.jpg' />
-          </Item>
-          <Item.Content>
-            <Item.Header>Mathematics (MATH)</Item.Header>
-            <Link to={'/edit/'}>See professors from this department</Link>
+            <Link to={'/list/'}>Professors</Link>
           </Item.Content>
         </Grid.Column>
       </Grid.Row>
