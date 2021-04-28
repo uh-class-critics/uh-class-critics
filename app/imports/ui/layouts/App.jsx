@@ -11,7 +11,7 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
-import ProfessorReview from '../pages/ProfessorReview';
+import ProfessorReview from '../pages/ProfessorReviewPage';
 import ListProfessors from '../pages/ListProfessors';
 import ListCourses from '../pages/ListCourses';
 import ProfessorOverview from '../pages/ProfessorOverview';
