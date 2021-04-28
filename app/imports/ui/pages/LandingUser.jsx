@@ -1,5 +1,6 @@
 import React from 'react';
-import { Grid, Image, Container, Header, Card } from 'semantic-ui-react';
+import { Grid, Image, Container, Header, Card, Button } from 'semantic-ui-react';
+import { NavLink } from 'react-router-dom';
 
 class LandingUser extends React.Component {
   render() {
@@ -45,7 +46,16 @@ class LandingUser extends React.Component {
                 </Card>
               </Grid.Column>
             </Grid.Row>
-          </Grid>
+              <Grid.Row className='get-started'>
+                <Grid.Column textAlign='center' >
+                  <Button size = 'huge' className='button' animated color ='black'
+                          as={NavLink} exact to="/mainprofessors">
+                    <Button.Content hidden> <i className="arrow right icon"></i> </Button.Content>
+                    <Button.Content visible>Get Started Now!</Button.Content>
+                  </Button>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
         </Container>
       </Container>
 

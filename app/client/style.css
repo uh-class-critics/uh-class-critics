@@ -18,7 +18,7 @@
   background: no-repeat url("/images/landing-user.jpg");
   background-size: 100%;
   width: 1920px;
-  height: 1080px;
+  height: 960px;
   padding-top: 175px;
   margin-bottom: -40px;
   margin-top: 10px;
@@ -89,6 +89,8 @@
   background-color: whitesmoke;
   margin: -30px;
   padding: 80px;
-
 }
 
+.get-started{
+  margin-right: 40px;
+}
