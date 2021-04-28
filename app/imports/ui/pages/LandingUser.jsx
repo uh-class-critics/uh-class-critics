@@ -46,16 +46,16 @@ class LandingUser extends React.Component {
                 </Card>
               </Grid.Column>
             </Grid.Row>
-              <Grid.Row className='get-started'>
-                <Grid.Column textAlign='center' >
-                  <Button size = 'huge' className='button' animated color ='black'
-                          as={NavLink} exact to="/mainprofessors">
-                    <Button.Content hidden> <i className="arrow right icon"></i> </Button.Content>
-                    <Button.Content visible>Get Started Now!</Button.Content>
-                  </Button>
-                </Grid.Column>
-              </Grid.Row>
-            </Grid>
+            <Grid.Row className='get-started'>
+              <Grid.Column textAlign='center' >
+                <Button size = 'huge' className='button' animated color ='black'
+                  as={NavLink} exact to="/mainprofessors">
+                  <Button.Content hidden> <i className="arrow right icon"></i> </Button.Content>
+                  <Button.Content visible>Get Started Now!</Button.Content>
+                </Button>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
         </Container>
       </Container>
 
