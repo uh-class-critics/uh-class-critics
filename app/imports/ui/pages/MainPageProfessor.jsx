@@ -15,7 +15,7 @@ const ItemExampleItems = () => (
           </Item>
           <Item.Content>
             <Item.Header>Inf. & Computer Science (ICS)</Item.Header>
-            <Link to={'/list/'}>Professors</Link>
+            <Link to={'/listprofessor/'}>Professors</Link>
           </Item.Content>
         </Grid.Column>
       </Grid.Row>

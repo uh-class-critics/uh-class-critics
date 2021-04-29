@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import { AutoForm, ErrorsField, SubmitField, TextField, LongTextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
-import { Meteor } from 'meteor/meteor';
+// import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { Professors } from '../../api/professors/Professors';
@@ -13,7 +13,7 @@ const formSchema = new SimpleSchema({
   lastName: String,
   image: String,
   title: String,
-  bio: String,
+  course: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -23,9 +23,9 @@ class NewReview extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { firstName, lastName, image, title, bio } = data;
-    const owner = Meteor.user().username;
-    Professors.collection.insert({ firstName, lastName, image, title, bio, owner },
+    const { firstName, lastName, image, title, course } = data;
+    // const owner = Meteor.user().username;
+    Professors.collection.insert({ firstName, lastName, image, title, course },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -49,7 +49,7 @@ class NewReview extends React.Component {
               <TextField name='lastName'/>
               <TextField name='image'/>
               <TextField name='title'/>
-              <LongTextField name ='bio'/>
+              <LongTextField name ='course'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
             </Segment>

@@ -5,7 +5,7 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Professors } from '../../api/professors/Professors';
 import Professor from '../components/Professor';
-import { Reviews } from '../../api/review/Reviews';
+// import { Reviews } from '../../api/review/Reviews';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListProfessors extends React.Component {
@@ -18,14 +18,14 @@ class ListProfessors extends React.Component {
   // Render the page once subscriptions have been received.
   renderPage() {
     return (
-      <Container>
-        <Header as="h2" textAlign="center">Professors</Header>
-        <Card.Group>
-          {this.props.professors.map((professor, index) => <Professor key={index}
-            professor={professor}
-            notes={this.props.reviews.filter(note => (note.contactId === professor._id))}/>)}
-        </Card.Group>
-      </Container>
+      <div className="list-professors-page">
+        <Container>
+          <Header as="h2" textAlign="center" inverted>Professors</Header>
+          <Card.Group>
+            {this.props.professors.map((professor, index) => <Professor key={index} professor={professor}/>)}
+          </Card.Group>
+        </Container>
+      </div>
     );
   }
 }
@@ -33,7 +33,6 @@ class ListProfessors extends React.Component {
 // Require an array of Stuff documents in the props.
 ListProfessors.propTypes = {
   professors: PropTypes.array.isRequired,
-  reviews: PropTypes.array.isRequired,
   ready: PropTypes.bool.isRequired,
 };
 
@@ -41,15 +40,9 @@ ListProfessors.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Professors.userPublicationName);
-  const subscription2 = Meteor.subscribe(Reviews.userPublicationName);
-  // Determine if the subscription is ready
-
-  // Get the Stuff documents
   const professors = Professors.collection.find({}).fetch();
-  const reviews = Reviews.collection.find({}).fetch();
   return {
     professors,
-    reviews,
-    ready: subscription.ready() && subscription2.ready(),
+    ready: subscription.ready(),
   };
 })(ListProfessors);

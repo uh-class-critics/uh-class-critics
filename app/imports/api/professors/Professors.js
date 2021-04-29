@@ -15,8 +15,7 @@ class ProfessorsCollection {
       lastName: String,
       image: String,
       title: String,
-      bio: String,
-      owner: String,
+      course: String,
     }, { tracker: Tracker });
     // Ensure collection documents obey schema.
     this.collection.attachSchema(this.schema);

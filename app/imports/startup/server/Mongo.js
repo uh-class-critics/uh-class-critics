@@ -7,8 +7,16 @@ import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
 // Initialize the database with a default data document.
 function addProfessor(data) {
-  console.log(`  Adding: ${data.lastName} (${data.owner})`);
+  console.log(`  Adding: ${data.lastName}`);
   Professors.collection.insert(data);
+}
+
+// Initialize the StuffsCollection if empty.
+if (Professors.collection.find().count() === 0) {
+  if (Meteor.settings.defaultProfessors) {
+    console.log('Creating default Professors.');
+    Meteor.settings.defaultProfessors.map(data => addProfessor(data));
+  }
 }
 
 function addCourse(data) {
@@ -19,14 +27,6 @@ function addCourse(data) {
 function addProfessorReview(data) {
   console.log(`  Adding: ${data.professorName} (${data.owner})`);
   ProfessorReviews.collection.insert(data);
-}
-
-// Initialize the StuffsCollection if empty.
-if (Professors.collection.find().count() === 0) {
-  if (Meteor.settings.defaultProfessors) {
-    console.log('Creating default Contacts.');
-    Meteor.settings.defaultProfessors.map(data => addProfessor(data));
-  }
 }
 
 // Initialize the StuffsCollection if empty.

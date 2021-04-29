@@ -7,8 +7,7 @@ import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
 Meteor.publish(Professors.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Professors.collection.find({ owner: username });
+    return Professors.collection.find();
   }
   return this.ready();
 });
@@ -37,15 +36,14 @@ Meteor.publish(ProfessorReviews.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Courses.userPublicationName, function () {
-  if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Courses.collection.find({ owner: username });
+/* Admin Level */
+
+Meteor.publish(Professors.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Professors.collection.find();
   }
   return this.ready();
 });
-
-/* Admin Level */
 
 Meteor.publish(Courses.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
