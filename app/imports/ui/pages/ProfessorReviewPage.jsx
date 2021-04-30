@@ -1,4 +1,5 @@
 import React from 'react';
+import { Meteor } from 'meteor/meteor';
 import { Grid, Segment, Header } from 'semantic-ui-react';
 import { AutoForm, ErrorsField, SelectField, SubmitField, LongTextField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
@@ -32,8 +33,8 @@ class ProfessorReviewPage extends React.Component {
   submit(data, formRef) {
     const { professorName, review, rating, course } = data;
     const createdAt = new Date().toDateString();
-    // const owner = Meteor.user().username;
-    ProfessorReviews.collection.insert({ professorName, rating, review, course, createdAt },
+    const owner = Meteor.user().username;
+    ProfessorReviews.collection.insert({ professorName, rating, review, course, owner, createdAt },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');

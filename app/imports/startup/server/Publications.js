@@ -36,14 +36,15 @@ Meteor.publish(ProfessorReviews.userPublicationName, function () {
   return this.ready();
 });
 
-/* Admin Level */
-
-Meteor.publish(Professors.adminPublicationName, function () {
-  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
-    return Professors.collection.find();
+Meteor.publish(Courses.userPublicationName, function () {
+  if (this.userId) {
+    const username = Meteor.users.findOne(this.userId).username;
+    return Courses.collection.find({ owner: username });
   }
   return this.ready();
 });
+
+/* Admin Level */
 
 Meteor.publish(Courses.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
