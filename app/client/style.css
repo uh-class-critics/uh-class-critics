@@ -80,17 +80,25 @@
   margin-top: 10px;
 }
 
-.professor-header {
-  letter-spacing: 5px;
-  margin-bottom: 100px;
-}
-
 .professor-main {
-  background-color: whitesmoke;
   margin: -30px;
   padding: 80px;
 }
 
 .get-started{
   margin-right: 40px;
+}
+
+.aboutUs-background {
+  padding-top: 100px;
+  padding-bottom: 200px;
+}
+
+.dept-course {
+  color: whitesmoke;
+  letter-spacing: 1px;
+}
+
+.professor-header {
+  letter-spacing: 2px;
 }
