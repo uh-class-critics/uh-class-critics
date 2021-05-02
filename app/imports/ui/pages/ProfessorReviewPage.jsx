@@ -14,7 +14,6 @@ const formSchema = new SimpleSchema({
   professorName: {
     type: String,
     allowedValues: ['Philip Johnson', 'Kyungnim Baek', 'Henri Casanova', 'Carleton Moore', 'Jason Leigh', 'Nodari Sitchinava', 'Ravi Narayan', 'Kim Bisted'],
-    defaultValue: 'Philip Johnson',
     label: 'Professor',
   },
   review: {
@@ -26,7 +25,12 @@ const formSchema = new SimpleSchema({
     allowedValues: [1, 2, 3, 4, 5],
     defaultValue: 3,
   },
-  course: String,
+  course: {
+    type: String,
+    allowedValues: ['ICS 111', 'ICS 141', 'ICS 211', 'ICS 212', 'ICS 222', 'ICS 235', 'ICS 241', 'ICS 311', 'ICS 312', 'ICS 313', 'ICS 314', 'ICS 321',
+      'ICS 332', 'ICS 369', 'ICS 390', 'ICS 414', 'ICS 423', 'ICS 426', 'ICS 428', 'ICS 438', 'ICS 451', 'ICS 455', 'ICS 466', 'ICS 484', 'ICS 486',
+      'ICS 491', 'ICS 614', 'ICS 621', 'ICS 632', 'ICS 636', 'ICS 667', 'ICS 690'],
+  },
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -56,12 +60,12 @@ class ProfessorReviewPage extends React.Component {
     return (
       <Grid container centered>
         <Grid.Column>
-          <Header as="h2" textAlign="center">Add Professor Review</Header>
+          <Header as="h2" textAlign="center">Write A Review!</Header>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <SelectField name='rating' />
               <SelectField name='professorName'/>
-              <TextField name='course'/>
+              <SelectField name='course'/>
               <LongTextField name='review'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
