@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import { NavLink } from 'react-router-dom';
 import { Professors } from '../../api/professors/Professors';
 import Review from '../components/Review';
-import { Reviews } from '../../api/review/Reviews';
+import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
 /** Renders the Page for editing a single document. */
 class ProfessorProfile extends React.Component {
@@ -38,7 +38,7 @@ class ProfessorProfile extends React.Component {
             </Card>
             <Card>
               <Card.Content>
-                <Button as={NavLink} exact to='/review'>Write Review</Button>
+                <Button as={NavLink} exact to={`/review/${this.props.professor._id}`}>Write Review</Button>
               </Card.Content>
             </Card>
           </Grid.Column>
@@ -71,7 +71,7 @@ class ProfessorProfile extends React.Component {
 // Require the presence of a Contact document in the props object. Uniforms adds 'model' to the props, which we use.
 ProfessorProfile.propTypes = {
   professor: PropTypes.object,
-  reviews: PropTypes.array.isRequired,
+  reviews: PropTypes.object.isRequired,
   model: PropTypes.object,
   ready: PropTypes.bool.isRequired,
 };
@@ -80,10 +80,10 @@ ProfessorProfile.propTypes = {
 export default withTracker(({ match }) => {
   const documentId = match.params._id;
   const subscription = Meteor.subscribe(Professors.userPublicationName);
-  const subscription2 = Meteor.subscribe(Reviews.userPublicationName);
+  const subscription2 = Meteor.subscribe(ProfessorReviews.userPublicationName);
   const ready = subscription.ready() && subscription2.ready();
   const professor = Professors.collection.findOne(documentId);
-  const reviews = Reviews.collection.find({}).fetch();
+  const reviews = ProfessorReviews.collection.find({}).fetch();
   return {
     professor,
     reviews,

@@ -10,6 +10,7 @@ import SimpleSchema from 'simpl-schema';
 import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
 // Create a schema to specify the structure of the data to appear in the form.
+
 const formSchema = new SimpleSchema({
   professorName: {
     type: String,
