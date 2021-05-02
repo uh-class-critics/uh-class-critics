@@ -36,56 +36,64 @@
       "lastName": "Johnson",
       "title": "Professor",
       "course": "ICS 314 Software Engineering I, ICS 491: Special Topics.",
-      "image": "https://philipmjohnson.github.io/images/philip2.jpeg"
+      "image": "https://philipmjohnson.github.io/images/philip2.jpeg",
+      "office": "POST 307B"
     },
     {
       "firstName": "Henri",
       "lastName": "Casanova",
       "title": "Professor",
       "image": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Henri_Casanova1.jpg",
-      "course": "ICS 312 Machine-Level and Systems Programming, ICS 332 Operating Systems, ICS 332 Operating Systems"
+      "course": "ICS 312 Machine-Level and Systems Programming, ICS 332 Operating Systems, ICS 332 Operating Systems",
+      "office": "POST 307B"
     },
     {
       "firstName": "Carleton",
       "lastName": "Moore",
       "title": "Assistant Professor",
       "image": "https://cammoore.github.io/images/cam-moore.jpg",
-      "course": "ICS 211 Intro to Computer Science II, ICS 314 Software Engineering I."
+      "course": "ICS 211 Intro to Computer Science II, ICS 314 Software Engineering I.",
+      "office": "POST 307B"
     },
     {
       "firstName": "Jason",
       "lastName": "Leigh",
       "title": "Professor",
       "image": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Jason_Leigh-2014.jpg",
-      "course": "ICS 111 Intro to Computer Science I, ICS 685 Virtual and Augmented Reality."
+      "course": "ICS 111 Intro to Computer Science I, ICS 685 Virtual and Augmented Reality.",
+      "office": "POST 307B"
     },
     {
       "firstName": "Kyungim",
       "lastName": "Baek",
       "title": "Associate Professor",
       "image": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/Kyungim_Baek1.jpg",
-      "course": "ICS 241 Discrete Mathematics II, CS 483 Computer Vision."
+      "course": "ICS 241 Discrete Mathematics II, CS 483 Computer Vision.",
+      "office": "POST 307B"
     },
     {
       "firstName": "Kim",
       "lastName": "Bisted",
       "title": "Professor",
       "image": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/kim_binsted-square-300x300.jpg",
-      "course": "ICS 313 Programming Language Theory."
+      "course": "ICS 313 Programming Language Theory.",
+      "office": "POST 307B"
     },
     {
       "firstName": "Ravi",
       "lastName": "Narayan",
       "title": "Professor",
       "image": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Ravi_Narayan-2014.jpg",
-      "course": "ICS 212: Program Structure, ICS 332: Operating Systems."
+      "course": "ICS 212: Program Structure, ICS 332: Operating Systems.",
+      "office": "POST 307B"
     },
     {
       "firstName": "Nodari",
       "lastName": "Sitchinava",
       "title": "Ph.D. (2020)",
       "image": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/Nodari_Sitchinava-2014.jpg",
-      "course": "ICS 621: Analysis of Algorithms, ICS 491: Competitive Programming, ICS 443: Parallel Algorithms."
+      "course": "ICS 621: Analysis of Algorithms, ICS 491: Competitive Programming, ICS 443: Parallel Algorithms.",
+      "office": "POST 307B"
     }
   ],
 

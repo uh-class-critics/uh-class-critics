@@ -1,5 +1,5 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Button, Card, Image } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
 import { withRouter, Link } from 'react-router-dom';
 // import Review from './Review';
@@ -12,7 +12,7 @@ class Professor extends React.Component {
         <Card.Content>
           <Image
             floated='right'
-            size='mini'
+            size='small'
             src={this.props.professor.image}
           />
           <Card.Header>
@@ -21,9 +21,13 @@ class Professor extends React.Component {
             </Link>
           </Card.Header>
           <Card.Meta>{this.props.professor.title}</Card.Meta>
+          <Card.Meta>{this.props.professor.office}</Card.Meta>
           <Card.Description>
-            <strong> Courses: {this.props.professor.course} </strong>
+            <strong> Courses: {this.props.professor.course}</strong>
           </Card.Description>
+        </Card.Content>
+        <Card.Content extra>
+          <Button compact floated='right' active size='small' color='black' as={Link} to='/review'>Write Review</Button>
         </Card.Content>
       </Card>
     );
