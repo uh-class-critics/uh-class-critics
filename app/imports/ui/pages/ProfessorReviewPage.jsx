@@ -4,6 +4,7 @@ import { Grid, Segment, Header } from 'semantic-ui-react';
 import { AutoForm, ErrorsField, SelectField, SubmitField, LongTextField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 // import { Meteor } from 'meteor/meteor';
+import PropTypes from 'prop-types';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
 import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
@@ -12,14 +13,18 @@ import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 const formSchema = new SimpleSchema({
   professorName: {
     type: String,
-    allowedValues: ['Philip Johnson', 'Baek Kyungim'],
+    allowedValues: ['Philip Johnson', 'Kyungnim Baek', 'Henri Casanova', 'Carleton Moore', 'Jason Leigh', 'Nodari Sitchinava', 'Ravi Narayan', 'Kim Bisted'],
     defaultValue: 'Philip Johnson',
+    label: 'Professor',
   },
-  review: String,
+  review: {
+    type: String,
+    max: 500,
+  },
   rating: {
     type: Number,
     allowedValues: [1, 2, 3, 4, 5],
-    defaultValue: 1,
+    defaultValue: 3,
   },
   course: String,
 });
@@ -55,7 +60,7 @@ class ProfessorReviewPage extends React.Component {
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
             <Segment>
               <SelectField name='rating' />
-              <SelectField name='professorName' />
+              <SelectField name='professorName'/>
               <TextField name='course'/>
               <LongTextField name='review'/>
               <SubmitField value='Submit'/>
@@ -67,5 +72,9 @@ class ProfessorReviewPage extends React.Component {
     );
   }
 }
+
+ProfessorReviewPage.propTypes = {
+  professor: PropTypes.object,
+};
 
 export default ProfessorReviewPage;

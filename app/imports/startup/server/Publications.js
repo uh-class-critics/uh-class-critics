@@ -14,32 +14,28 @@ Meteor.publish(Professors.userPublicationName, function () {
 
 Meteor.publish(ProfessorReviews.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return ProfessorReviews.collection.find({ owner: username });
+    return ProfessorReviews.collection.find();
   }
   return this.ready();
 });
 
 Meteor.publish(Reviews.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Reviews.collection.find({ owner: username });
+    return Reviews.collection.find({});
   }
   return this.ready();
 });
 
 Meteor.publish(ProfessorReviews.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return ProfessorReviews.collection.find({ owner: username });
+    return ProfessorReviews.collection.find({});
   }
   return this.ready();
 });
 
 Meteor.publish(Courses.userPublicationName, function () {
   if (this.userId) {
-    const username = Meteor.users.findOne(this.userId).username;
-    return Courses.collection.find({ owner: username });
+    return Courses.collection.find({});
   }
   return this.ready();
 });

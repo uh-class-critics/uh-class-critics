@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card, Image } from 'semantic-ui-react';
+import { Button, Card, Image, Header } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter, Link, NavLink } from 'react-router-dom';
 // import Review from './Review';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
@@ -24,6 +24,12 @@ class Professor extends React.Component {
           <Card.Description>
             <strong> Courses: {this.props.professor.course} </strong>
           </Card.Description>
+          <br/>
+          <Card.Header>
+            <Header textAlign='center'>
+              <Button size='tiny' color='black' as={NavLink} exact to={`/professor/${this.props.professor._id}`}>Visit</Button>
+            </Header>
+          </Card.Header>
         </Card.Content>
       </Card>
     );
