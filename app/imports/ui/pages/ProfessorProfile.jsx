@@ -28,6 +28,8 @@ class ProfessorProfile extends React.Component {
               <Card.Content>
                 <Card.Header>{this.props.professor.firstName} {this.props.professor.lastName}</Card.Header>
                 <Card.Meta>{this.props.professor.title}</Card.Meta>
+                <Card.Meta>office: {this.props.professor.office}</Card.Meta>
+                <br/>
                 <Card.Description>Courses Taught: {this.props.professor.course}</Card.Description>
               </Card.Content>
               <Card.Content extra>

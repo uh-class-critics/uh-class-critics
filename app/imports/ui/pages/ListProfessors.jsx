@@ -5,7 +5,6 @@ import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Professors } from '../../api/professors/Professors';
 import Professor from '../components/Professor';
-import { Reviews } from '../../api/review/Reviews';
 
 // import { Reviews } from '../../api/review/Reviews';
 
@@ -42,8 +41,7 @@ ListProfessors.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Professors.userPublicationName);
-  const subscription2 = Meteor.subscribe(Reviews.userPublicationName);
-  const ready = subscription.ready() && subscription2.ready();
+  const ready = subscription.ready();
   const professors = Professors.collection.find({}).fetch();
   return {
     professors,
