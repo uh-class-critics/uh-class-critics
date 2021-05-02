@@ -71,7 +71,7 @@ class ProfessorProfile extends React.Component {
 // Require the presence of a Contact document in the props object. Uniforms adds 'model' to the props, which we use.
 ProfessorProfile.propTypes = {
   professor: PropTypes.object,
-  reviews: PropTypes.object.isRequired,
+  reviews: PropTypes.array.isRequired,
   model: PropTypes.object,
   ready: PropTypes.bool.isRequired,
 };
