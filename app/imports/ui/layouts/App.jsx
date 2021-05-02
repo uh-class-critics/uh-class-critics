@@ -11,7 +11,7 @@ import NotFound from '../pages/NotFound';
 import Signin from '../pages/Signin';
 import Signup from '../pages/Signup';
 import Signout from '../pages/Signout';
-import ProfessorReview from '../pages/ProfessorReviewPage';
+import ProfessorReviewPage from '../pages/ProfessorReviewPage';
 import ListProfessors from '../pages/ListProfessors';
 import ListCourses from '../pages/ListCourses';
 import ProfessorOverview from '../pages/ProfessorOverview';
@@ -19,6 +19,7 @@ import MainPageProfessor from '../pages/MainPageProfessor';
 import LandingUser from '../pages/LandingUser';
 import NewReview from '../pages/NewReview';
 import AboutUs from '../pages/AboutUs';
+import ProfessorProfile from '../pages/ProfessorProfile';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -38,8 +39,9 @@ class App extends React.Component {
               <ProtectedRoute path="/mainprofessors" component= {MainPageProfessor}/>
               <ProtectedRoute path="/listprofessor" component={ListProfessors}/>
               <ProtectedRoute path="/courses" component= {ListCourses}/>
-              <ProtectedRoute path="/review" component= {ProfessorReview}/>
+              <ProtectedRoute path="/review" component= {ProfessorReviewPage}/>
               <ProtectedRoute path="/overview" component= {ProfessorOverview}/>
+              <ProtectedRoute path="/professor/:_id" component= {ProfessorProfile}/>
               <AdminProtectedRoute path="/NewReview" component={NewReview}/>
               <Route component={NotFound}/>
             </Switch>

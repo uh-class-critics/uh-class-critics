@@ -11,14 +11,6 @@ function addProfessor(data) {
   Professors.collection.insert(data);
 }
 
-// Initialize the StuffsCollection if empty.
-if (Professors.collection.find().count() === 0) {
-  if (Meteor.settings.defaultProfessors) {
-    console.log('Creating default Professors.');
-    Meteor.settings.defaultProfessors.map(data => addProfessor(data));
-  }
-}
-
 function addCourse(data) {
   console.log(`  Adding: ${data.professor} (${data.owner})`);
   Courses.collection.insert(data);
@@ -29,13 +21,20 @@ function addProfessorReview(data) {
   ProfessorReviews.collection.insert(data);
 }
 
-// Initialize the StuffsCollection if empty.
+if (Professors.collection.find().count() === 0) {
+  if (Meteor.settings.defaultProfessors) {
+    console.log('Creating default Professors.');
+    Meteor.settings.defaultProfessors.map(data => addProfessor(data));
+  }
+}
+
 if (Courses.collection.find().count() === 0) {
   if (Meteor.settings.defaultCourses) {
     console.log('Creating default courses.');
     Meteor.settings.defaultCourses.map(data => addCourse(data));
   }
 }
+
 if (ProfessorReviews.collection.find().count() === 0) {
   if (Meteor.settings.defaultProfessorReviews) {
     console.log('Creating default Reviews.');
