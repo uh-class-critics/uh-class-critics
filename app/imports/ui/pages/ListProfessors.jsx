@@ -1,15 +1,27 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { _ } from 'meteor/underscore';
+import { Container, Loader, Card, Input, Header } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import { Professors } from '../../api/professors/Professors';
 import Professor from '../components/Professor';
-
 // import { Reviews } from '../../api/review/Reviews';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListProfessors extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { search: '' };
+  }
+
+  handleChange = (e, { value }) => this.setState({ search: value });
+
+  ProfessorSearch = (professor) => {
+    const { search } = this.state;
+    const lowerCase = search.toLowerCase();
+    return professor.firstName.toLowerCase().startsWith(lowerCase);
+  }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -18,12 +30,19 @@ class ListProfessors extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
+    const allFirstNames = _.filter(this.props.professors, this.ProfessorSearch);
+    const sorted = _.sortBy(allFirstNames, 'firstName');
+
     return (
       <div className="list-professors-page">
         <Container>
           <Header as="h2" textAlign="center">Information & Computer Science Professors</Header>
+          <br/><br/>
+          <Input inverted type='text' size='large' placeholder='Search here...' icon='search' fluid
+            onChange={this.handleChange}/>
+          <br/><br/><br/><br/>
           <Card.Group>
-            {this.props.professors.map((professor, index) => <Professor key={index} professor={professor}/>)}
+            {sorted.map((professor, index) => <Professor key={index} professor={professor}/>)}
           </Card.Group>
         </Container>
       </div>
@@ -41,10 +60,9 @@ ListProfessors.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Professors.userPublicationName);
-  const ready = subscription.ready();
   const professors = Professors.collection.find({}).fetch();
   return {
     professors,
-    ready,
+    ready: subscription.ready(),
   };
 })(ListProfessors);
