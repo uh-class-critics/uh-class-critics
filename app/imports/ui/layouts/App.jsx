@@ -14,8 +14,6 @@ import Signout from '../pages/Signout';
 import ProfessorReviewPage from '../pages/ProfessorReviewPage';
 import ListProfessors from '../pages/ListProfessors';
 import ListCourses from '../pages/ListCourses';
-import ProfessorOverview from '../pages/ProfessorOverview';
-import MainPageProfessor from '../pages/MainPageProfessor';
 import LandingUser from '../pages/LandingUser';
 import NewReview from '../pages/NewReview';
 import AboutUs from '../pages/AboutUs';
@@ -36,11 +34,9 @@ class App extends React.Component {
               <Route path="/signout" component={Signout}/>
               <Route path="/aboutUs" component={AboutUs}/>
               <ProtectedRoute path="/User" component={LandingUser}/>
-              <ProtectedRoute path="/mainprofessors" component= {MainPageProfessor}/>
               <ProtectedRoute path="/listprofessor" component={ListProfessors}/>
               <ProtectedRoute path="/courses" component= {ListCourses}/>
               <ProtectedRoute path="/review/:_id" component= {ProfessorReviewPage}/>
-              <ProtectedRoute path="/overview" component= {ProfessorOverview}/>
               <ProtectedRoute path="/professor/:_id" component= {ProfessorProfile}/>
               <AdminProtectedRoute path="/NewReview" component={NewReview}/>
               <Route component={NotFound}/>
