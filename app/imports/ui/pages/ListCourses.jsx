@@ -1,6 +1,7 @@
 import React from 'react';
 import { Meteor } from 'meteor/meteor';
-import { Container, Header, Loader, Card } from 'semantic-ui-react';
+import { _ } from 'meteor/underscore';
+import { Container, Header, Loader, Card, Input } from 'semantic-ui-react';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
 import Course from '../components/Course';
@@ -8,6 +9,18 @@ import { Courses } from '../../api/course/Courses';
 
 /** Renders a table containing all of the Stuff documents. Use <StuffItem> to render each row. */
 class ListCourses extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { search: '' };
+  }
+
+  handleChange = (e, { value }) => this.setState({ search: value });
+
+  CourseSearch = (course) => {
+    const { search } = this.state;
+    const lowerCase = search.toLowerCase();
+    return course.courseName.toLowerCase().startsWith(lowerCase);
+  }
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -16,11 +29,17 @@ class ListCourses extends React.Component {
 
   // Render the page once subscriptions have been received.
   renderPage() {
+    const allCoursesNames = _.filter(this.props.courses, this.CourseSearch);
+    const sorted = _.sortBy(allCoursesNames, 'courseName');
     return (
       <Container>
         <Header as="h2" textAlign="center">Courses</Header>
+        <br/><br/>
+        <Input inverted type='text' size='large' placeholder='Search here...' icon='search' fluid
+          onChange={this.handleChange}/>
+        <br/><br/><br/><br/>
         <Card.Group>
-          {this.props.courses.map((course, index) => <Course key={index} course={course}/>)}
+          {sorted.map((course, index) => <Course key={index} course={course}/>)}
         </Card.Group>
       </Container>
     );
