@@ -42,6 +42,13 @@ Meteor.publish(Courses.userPublicationName, function () {
 
 /* Admin Level */
 
+Meteor.publish(Professors.adminPublicationName, function () {
+  if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
+    return Courses.collection.find();
+  }
+  return this.ready();
+});
+
 Meteor.publish(Courses.adminPublicationName, function () {
   if (this.userId && Roles.userIsInRole(this.userId, 'admin')) {
     return Courses.collection.find();

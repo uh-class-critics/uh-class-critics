@@ -14,6 +14,7 @@ const formSchema = new SimpleSchema({
   image: String,
   title: String,
   course: String,
+  office: String,
 });
 
 const bridge = new SimpleSchema2Bridge(formSchema);
@@ -23,9 +24,9 @@ class NewReview extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { firstName, lastName, image, title, course } = data;
+    const { firstName, lastName, image, title, course, office } = data;
     // const owner = Meteor.user().username;
-    Professors.collection.insert({ firstName, lastName, image, title, course },
+    Professors.collection.insert({ firstName, lastName, image, title, course, office },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -49,6 +50,7 @@ class NewReview extends React.Component {
               <TextField name='lastName'/>
               <TextField name='image'/>
               <TextField name='title'/>
+              <TextField name='office'/>
               <LongTextField name ='course'/>
               <SubmitField value='Submit'/>
               <ErrorsField/>
