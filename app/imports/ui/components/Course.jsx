@@ -1,7 +1,7 @@
 import React from 'react';
-import { Card } from 'semantic-ui-react';
+import { Button, Card, Header } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Course extends React.Component {
@@ -9,10 +9,23 @@ class Course extends React.Component {
     return (
       <Card centered>
         <Card.Content>
-          <Card.Header>{this.props.course.courseName} {this.props.course.professor}</Card.Header>
+          <Card.Header>{this.props.course.courseName}</Card.Header>
+          <Card.Meta>{this.props.course.title}</Card.Meta>
           <Card.Description>
-            {this.props.course.review}
+            <strong>Description: {this.props.course.description}</strong>
           </Card.Description>
+          <br/>
+          <Card.Description>
+            Professor: {this.props.course.professor}
+          </Card.Description>
+          <Card.Description>
+            Credits: {this.props.course.credits}
+          </Card.Description>
+          <Card.Header>
+            <Header textAlign='center'>
+              <Button size='tiny' color='black' as={NavLink} exact to={`/course/${this.props.course._id}`}>Visit</Button>
+            </Header>
+          </Card.Header>
         </Card.Content>
       </Card>
     );

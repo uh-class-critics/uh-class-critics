@@ -6,22 +6,14 @@
 
   "defaultCourses": [
     {
-      "courseName": "ICS 314", "professor": "Philip Johnson", "owner": "john@foo.com", "review": "I have learned alot about software engineering and website building in this course"
-    },
-    {
-      "courseName": "ICS 212", "professor": "Ravi Narayan", "owner": "john@foo.com", "review": "Learning program structure is not easy, but the work was manageable to some extent. C can be tricky to learn though."
-    },
-    {
-      "courseName": "ICS 111", "professor": "Jason Leigh", "owner": "john@foo.com", "review": "Very good professor. Teaches introductory java and basic programming concepts are easy to understand."
-    },
-    {
-      "courseName": "ICS 311", "professor": "Lisa Miller", "owner": "john@foo.com", "review": "Very friendly and helpful. Always available and ready to assist you in problems."
-    },
-    {
-      "courseName": "ICS 211", "professor": "Edo Biagioni", "owner": "john@foo.com", "review": "Edo knows his stuff cold. His lectures are a little dry but he is very smart. If you ever have a question, make sure to ask because you can fall behind quickly if you are lost. Book was not used. Attendance is not mandatory but good luck passing without going to class."
-    },
-    {
-      "courseName": "ICS 321", "professor": "Richard Halverson", "owner": "john@foo.com", "review": "Professor Halverson has YouTube videos that helps you complete the programming assignments when you are stuck. As long as you do the homework, refer to the textbook, and look for any notes either online or through his videos, you'll do great."
+      "courseName": "ICS 314",
+      "professor": "Philip Johnson",
+      "title": "Software Engineering I",
+      "description": "Problem analysis and design, team-oriented development, quality assurance, configuration management, project planning.",
+      "attributes": "NI, WI, C19, TXT0, UD",
+      "credits" : "3",
+      "alpha" : "ICS (Information and Computer Science)",
+      "owner": "john@foo.com"
     }
   ],
 

@@ -19,6 +19,7 @@ import NewReview from '../pages/NewReview';
 import AboutUs from '../pages/AboutUs';
 import ProfessorProfile from '../pages/ProfessorProfile';
 import AddCourse from '../pages/AddCourse';
+import CourseOverview from '../pages/CourseOverview';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
@@ -39,6 +40,7 @@ class App extends React.Component {
               <ProtectedRoute path="/courses" component= {ListCourses}/>
               <ProtectedRoute path="/review/:_id" component= {ProfessorReviewPage}/>
               <ProtectedRoute path="/professor/:_id" component= {ProfessorProfile}/>
+              <ProtectedRoute path="/course/:_id" component= {CourseOverview}/>
               <AdminProtectedRoute path="/NewReview" component={NewReview}/>
               <AdminProtectedRoute path="/AddCourse" component={AddCourse}/>
               <Route component={NotFound}/>
