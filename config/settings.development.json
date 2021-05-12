@@ -12,7 +12,27 @@
       "description": "Problem analysis and design, team-oriented development, quality assurance, configuration management, project planning.",
       "attributes": "NI, WI, C19, TXT0, UD",
       "credits" : "3",
-      "alpha" : "ICS (Information and Computer Science)",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 211 ",
+      "professor": "Carleton Moore",
+      "title": "Intro to Computer Science II",
+      "description": "Reinforce and strengthen problem-solving skills using abstract data types and introduce software development practices. Emphasize the use of searching and sorting algorithms and their complexity, recursion, object-oriented programming, and data structures.",
+      "attributes": "NI",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 419",
+      "professor": "Philip Johnson",
+      "title": "Sci, Psych & Phil of Sys Dsgn",
+      "description": "Scientific, psychological and philosophical bases of systems design, including a survey of human-factors and ergonomic standards; the nature of innovation and creativity as it relates to systems design.",
+      "attributes": "NI, UD",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
       "owner": "john@foo.com"
     }
   ],

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Card, Header } from 'semantic-ui-react';
 import PropTypes from 'prop-types';
-import { NavLink, withRouter } from 'react-router-dom';
+import { Link, NavLink, withRouter } from 'react-router-dom';
 
 /** Renders a single row in the List Stuff table. See pages/ListStuff.jsx. */
 class Course extends React.Component {
@@ -9,7 +9,11 @@ class Course extends React.Component {
     return (
       <Card centered>
         <Card.Content>
-          <Card.Header>{this.props.course.courseName}</Card.Header>
+          <Card.Header>
+            <Link to={`/course/${this.props.course._id}`}>
+              {this.props.course.courseName}
+            </Link>
+          </Card.Header>
           <Card.Meta>{this.props.course.title}</Card.Meta>
           <Card.Description>
             <strong>Description: {this.props.course.description}</strong>
