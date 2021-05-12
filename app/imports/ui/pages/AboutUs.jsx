@@ -152,7 +152,7 @@ class Landing extends React.Component {
               <Card>
                 <Image circular src='https://johnny-ho1.github.io/images/Johnny.png' wrapped ui={false} />
                 <Card.Content>
-                  <Card.Header>Zohnny Ho</Card.Header>
+                  <Card.Header>Johnny Ho</Card.Header>
                   <Card.Meta>
                     <span>Sophomore, ICS Student</span>
                   </Card.Meta>
