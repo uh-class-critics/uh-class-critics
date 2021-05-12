@@ -12,7 +12,7 @@ function addProfessor(data) {
 }
 
 function addCourse(data) {
-  console.log(`  Adding: ${data.professor} (${data.owner})`);
+  console.log(`  Adding: ${data.courseName} `);
   Courses.collection.insert(data);
 }
 
