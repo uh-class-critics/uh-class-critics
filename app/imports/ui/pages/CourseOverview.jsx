@@ -28,7 +28,20 @@ class ProfessorProfile extends React.Component {
                 <Card.Header>{this.props.course.courseName}</Card.Header>
                 <Card.Meta>{this.props.course.title}</Card.Meta>
                 <br/>
-                <Card.Description>Instructor: {this.props.course.professor}</Card.Description>
+                <Card.Description><strong>Instructor: </strong>{this.props.course.professor}</Card.Description>
+                <Card.Description>
+                  <strong>Department:</strong> {this.props.course.alpha}
+                </Card.Description>
+                <Card.Description>
+                  <strong>Description:</strong> {this.props.course.description}
+                </Card.Description>
+                <br/>
+                <Card.Description>
+                  <strong>Credits:</strong> {this.props.course.credits}
+                </Card.Description>
+                <Card.Description>
+                  <strong> Attributes:</strong> {this.props.course.attributes}
+                </Card.Description>
               </Card.Content>
               <Card.Content extra>
                 <Rating disabled icon='star' maxRating={5} defaultRating={4}/>

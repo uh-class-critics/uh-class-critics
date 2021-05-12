@@ -18,9 +18,7 @@ class Course extends React.Component {
           <Card.Description>
             Professor: {this.props.course.professor}
           </Card.Description>
-          <Card.Description>
-            Credits: {this.props.course.credits}
-          </Card.Description>
+          <br/>
           <Card.Header>
             <Header textAlign='center'>
               <Button size='tiny' color='black' as={NavLink} exact to={`/course/${this.props.course._id}`}>Visit</Button>
