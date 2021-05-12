@@ -1,15 +1,15 @@
 import React from 'react';
-import { Grid, Loader, Card, Rating, Header, Feed, Button } from 'semantic-ui-react';
+import { Grid, Loader, Card, Rating, Feed } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
-import { NavLink } from 'react-router-dom';
 import { Courses } from '../../api/course/Courses';
 import Review from '../components/Review';
-import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
+import { Reviews } from '../../api/review/Reviews';
+import AddReview from '../components/AddReview';
 
 /** Renders the Page for editing a single document. */
-class ProfessorProfile extends React.Component {
+class CourseReview extends React.Component {
 
   // If the subscription(s) have been received, render the page, otherwise show a loading icon.
   render() {
@@ -20,7 +20,7 @@ class ProfessorProfile extends React.Component {
   renderPage() {
     const filter = this.props.reviews.filter(review => review.contactId === this.props.course._id);
     return (
-      <Grid container columns={3}>
+      <Grid container columns={2}>
         <Grid.Column width={4}>
           <Grid.Column>
             <Card>
@@ -47,25 +47,14 @@ class ProfessorProfile extends React.Component {
                 <Rating disabled icon='star' maxRating={5} defaultRating={4}/>
               </Card.Content>
             </Card>
-            <Card>
-              <Card.Content>
-                <Button as={NavLink} exact to={`/review/${this.props.course._id}`}>Write Review</Button>
-              </Card.Content>
-            </Card>
           </Grid.Column>
         </Grid.Column>
 
-        <Grid.Column width={2}>
-        </Grid.Column>
-
         <Grid.Column width={10}>
-          <Header as='h3'>Reviews for {this.props.course.courseName}</Header>
-          <Grid.Row>
-            <hr/>
-          </Grid.Row>
+          <AddReview contactId={this.props.course._id}/>
           <Card fluid>
             <Card.Content>
-              <Card.Header>Reviews</Card.Header>
+              <Card.Header>Reviews for {this.props.course.courseName}</Card.Header>
             </Card.Content>
             <Card.Content>
               <Feed>
@@ -80,7 +69,7 @@ class ProfessorProfile extends React.Component {
 }
 
 // Require the presence of a Contact document in the props object. Uniforms adds 'model' to the props, which we use.
-ProfessorProfile.propTypes = {
+CourseReview.propTypes = {
   course: PropTypes.object,
   reviews: PropTypes.array.isRequired,
   model: PropTypes.object,
@@ -91,13 +80,13 @@ ProfessorProfile.propTypes = {
 export default withTracker(({ match }) => {
   const documentId = match.params._id;
   const subscription = Meteor.subscribe(Courses.userPublicationName);
-  const subscription2 = Meteor.subscribe(ProfessorReviews.userPublicationName);
+  const subscription2 = Meteor.subscribe(Reviews.userPublicationName);
   const ready = subscription.ready() && subscription2.ready();
   const course = Courses.collection.findOne(documentId);
-  const reviews = ProfessorReviews.collection.find({}).fetch();
+  const reviews = Reviews.collection.find({}).fetch();
   return {
     course,
     reviews,
     ready,
   };
-})(ProfessorProfile);
+})(CourseReview);

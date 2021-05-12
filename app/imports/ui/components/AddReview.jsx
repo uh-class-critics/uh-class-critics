@@ -1,9 +1,9 @@
 import React from 'react';
-import { Segment } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, SubmitField, TextField, HiddenField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, HiddenField, NumField, LongTextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
-import PropTypes from 'prop-types';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
+import PropTypes from 'prop-types';
+import { Header, Segment } from 'semantic-ui-react';
 import { Reviews } from '../../api/review/Reviews';
 
 const bridge = new SimpleSchema2Bridge(Reviews.schema);
@@ -13,28 +13,28 @@ class AddReview extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { note, owner, contactId, createdAt } = data;
-    Reviews.collection.insert({ note, owner, contactId, createdAt },
+    const { review, rating, contactId, createdAt } = data;
+    Reviews.collection.insert({ review, rating, contactId, createdAt },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
         } else {
-          swal('Success', 'Review sent successfully', 'success');
+          swal('Success', 'Review added successfully', 'success');
           formRef.reset();
         }
       });
   }
 
-  // Render the form. Use Uniforms: https://github.com/vazco/uniforms
   render() {
     let fRef = null;
     return (
-      <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+      <AutoForm placeholder={true} ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
         <Segment>
-          <TextField label="Write a review" name='note'/>
-          <SubmitField value='Submit'/>
+          <Header>Write A Review</Header>
+          <NumField decimal={false} max={5} min={1} label="Rating" name='rating' placeholder='From 1 to 5'/>
+          <LongTextField label="Write Your Review" name='review'/>
+          <SubmitField centered value='Submit'/>
           <ErrorsField/>
-          <HiddenField name='owner' value={this.props.owner}/>
           <HiddenField name='contactId' value={this.props.contactId}/>
           <HiddenField name='createdAt' value={new Date()}/>
         </Segment>
@@ -44,7 +44,6 @@ class AddReview extends React.Component {
 }
 
 AddReview.propTypes = {
-  owner: PropTypes.string.isRequired,
   contactId: PropTypes.string.isRequired,
 };
 

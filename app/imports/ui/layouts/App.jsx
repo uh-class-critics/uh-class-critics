@@ -15,11 +15,11 @@ import ProfessorReviewPage from '../pages/ProfessorReviewPage';
 import ListProfessors from '../pages/ListProfessors';
 import ListCourses from '../pages/ListCourses';
 import LandingUser from '../pages/LandingUser';
-import NewReview from '../pages/NewReview';
 import AboutUs from '../pages/AboutUs';
-import ProfessorProfile from '../pages/ProfessorProfile';
+import ProfessorProfile from '../pages/ProfessorReview';
 import AddCourse from '../pages/AddCourse';
-import CourseOverview from '../pages/CourseOverview';
+import CourseOverview from '../pages/CourseReview';
+import NewReview from '../pages/NewReview';
 
 /** Top-level layout component for this application. Called in imports/startup/client/startup.jsx. */
 class App extends React.Component {
