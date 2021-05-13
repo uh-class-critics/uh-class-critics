@@ -26,6 +26,86 @@
       "owner": "john@foo.com"
     },
     {
+      "courseName": "ICS 141 ",
+      "professor": "Baek Kyungim",
+      "title": "Discrete Math for CS I",
+      "description": "Logic, sets, functions, matrices, algorithmic concepts, mathematical reasoning, recursion, counting techniques, probability theory. FS.",
+      "attributes": "NI",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 212 ",
+      "professor": "Narayan Ravi",
+      "title": "Program Structure",
+      "description": "Program organization paradigms, programming environments, implementation of a module from specifications, the C and C++ programming languages. Pre: 211 or consent.",
+      "attributes": "NI",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 222 ",
+      "professor": "Seidel Peter-Michael",
+      "title": "Basic Concepts of Comp. Science",
+      "description": "What is the subject of computer science? What is a computer? Understand the basic models of computation and the concepts of computability, complexity, and network computation, and learn to use them in practice.",
+      "attributes": "NI",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 235 ",
+      "professor": "Baek Kyungim",
+      "title": "Machine Learning Methods",
+      "description": "Introduction to contemporary mathematical methods for empirical inference, data modeling, and machine learning.",
+      "attributes": "NI",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 241 ",
+      "professor": "Li Depeng",
+      "title": "Discrete Mathematics II",
+      "description": "Includes program correctness, recurrence relations and their solutions, relations and their properties, divide and conquer relations, graph theory, trees and their applications, Boolean algebra, introduction to formal languages and automata theory.",
+      "attributes": "NI",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 312 ",
+      "professor": "Casanova Henri",
+      "title": "Machine-Lvl & Systems Program",
+      "description": "Machine organization, machine instructions, addressing modes, assembler language, subroutine linkage, linking to higher-level languages, interface to operating systems, introduction to assemblers, loaders and compilers.",
+      "attributes": "C19",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 313 ",
+      "professor": "Biagioni Edoardo",
+      "title": "Programming Language Theory",
+      "description": "Syntax, semantics, control structures, variable binding and scopes, data and control abstractions. Programming in functional (LISP) and logic (Prolog) programming styles.",
+      "attributes": "C19",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
+      "courseName": "ICS 321 ",
+      "professor": "Halverson Richard",
+      "title": "Database Systems I",
+      "description": "Introduction to relational database systems, data modeling, query processing, transaction processing, storage, and indexing.",
+      "attributes": "NI",
+      "credits" : "3",
+      "alpha" : "Information and Computer Science",
+      "owner": "john@foo.com"
+    },
+    {
       "courseName": "ICS 419",
       "professor": "Philip Johnson",
       "title": "Sci, Psych & Phil of Sys Dsgn",

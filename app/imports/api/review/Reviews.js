@@ -14,6 +14,8 @@ class ReviewsCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       review: String,
+      professorName: String,
+      owner: String,
       contactId: String,
       rating: String,
       createdAt: Date,
