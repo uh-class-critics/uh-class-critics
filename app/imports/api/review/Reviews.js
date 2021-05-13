@@ -18,7 +18,7 @@ class ReviewsCollection {
       owner: String,
       contactId: String,
       rating: {
-        type: Number,
+        type: String,
         allowedValues: [1, 2, 3, 4, 5],
         defaultValue: 3,
       },
