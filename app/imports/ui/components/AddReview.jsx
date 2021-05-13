@@ -1,5 +1,5 @@
 import React from 'react';
-import { AutoForm, ErrorsField, SubmitField, HiddenField, LongTextField, SelectField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, HiddenField, NumField, LongTextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import PropTypes from 'prop-types';
@@ -15,30 +15,30 @@ class AddReview extends React.Component {
   submit(data, formRef) {
     const { review, rating, contactId, createdAt } = data;
     Reviews.collection.insert({ review, rating, contactId, createdAt },
-      (error) => {
-        if (error) {
-          swal('Error', error.message, 'error');
-        } else {
-          swal('Success', 'Review added successfully', 'success');
-          formRef.reset();
-        }
-      });
+        (error) => {
+          if (error) {
+            swal('Error', error.message, 'error');
+          } else {
+            swal('Success', 'Review added successfully', 'success');
+            formRef.reset();
+          }
+        });
   }
 
   render() {
     let fRef = null;
     return (
-      <AutoForm placeholder={true} ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-        <Segment>
-          <Header>Write A Review</Header>
-          <SelectField decimal={false} max={5} min={1} label="Rating" name='rating' placeholder='Select Rating'/>
-          <LongTextField label="Review" name='review'/>
-          <SubmitField centered value='Submit'/>
-          <ErrorsField/>
-          <HiddenField name='contactId' value={this.props.contactId}/>
-          <HiddenField name='createdAt' value={new Date()}/>
-        </Segment>
-      </AutoForm>
+        <AutoForm placeholder={true} ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+          <Segment>
+            <Header>Write A Review</Header>
+            <NumField decimal={false} max={5} min={1} label="Rating" name='rating' placeholder='From 1 to 5'/>
+            <LongTextField label="Write Your Review" name='review'/>
+            <SubmitField centered value='Submit'/>
+            <ErrorsField/>
+            <HiddenField name='contactId' value={this.props.contactId}/>
+            <HiddenField name='createdAt' value={new Date()}/>
+          </Segment>
+        </AutoForm>
     );
   }
 }

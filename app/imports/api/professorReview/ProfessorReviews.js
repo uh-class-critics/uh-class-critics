@@ -13,12 +13,14 @@ class ProfessorReviewsCollection {
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      createdAt: Date,
       professorName: String,
       review: String,
-      owner: String,
       course: String,
-      rating: String,
+      rating: {
+        type: Number,
+        allowedValues: [1, 2, 3, 4, 5],
+        defaultValue: 1,
+      },
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
     this.collection.attachSchema(this.schema);

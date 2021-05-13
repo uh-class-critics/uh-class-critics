@@ -14,14 +14,8 @@ class ReviewsCollection {
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
       review: String,
-      professorName: String,
-      owner: String,
       contactId: String,
-      rating: {
-        type: String,
-        allowedValues: [1, 2, 3, 4, 5],
-        defaultValue: 3,
-      },
+      rating: String,
       createdAt: Date,
     }, { tracker: Tracker });
     // Attach the schema to the collection, so all attempts to insert a document are checked against schema.
