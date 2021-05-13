@@ -1,8 +1,9 @@
 import React from 'react';
-import { AutoForm, ErrorsField, SubmitField, HiddenField, LongTextField, SelectField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, HiddenField, NumField, LongTextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import PropTypes from 'prop-types';
+import { Meteor } from 'meteor/meteor';
 import { Header, Segment } from 'semantic-ui-react';
 import { Reviews } from '../../api/review/Reviews';
 
@@ -13,8 +14,9 @@ class AddReview extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
-    const { review, rating, contactId, createdAt } = data;
-    Reviews.collection.insert({ review, rating, contactId, createdAt },
+    const { review, rating, contactId, createdAt, professorName } = data;
+    const owner = Meteor.user().username;
+    Reviews.collection.insert({ review, rating, contactId, createdAt, professorName, owner },
       (error) => {
         if (error) {
           swal('Error', error.message, 'error');
@@ -31,7 +33,7 @@ class AddReview extends React.Component {
       <AutoForm placeholder={true} ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
         <Segment>
           <Header>Write A Review</Header>
-          <SelectField decimal={false} max={5} min={1} label="Rating" name='rating' placeholder='Select Rating'/>
+          <NumField decimal={false} max={5} min={1} label="Rating" name='rating' placeholder='From 1 to 5'/>
           <LongTextField label="Review" name='review'/>
           <SubmitField centered value='Submit'/>
           <ErrorsField/>
