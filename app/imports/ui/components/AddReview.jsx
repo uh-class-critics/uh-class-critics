@@ -1,5 +1,5 @@
 import React from 'react';
-import { AutoForm, ErrorsField, SubmitField, HiddenField, NumField, LongTextField, SelectField } from 'uniforms-semantic';
+import { AutoForm, ErrorsField, SubmitField, HiddenField, LongTextField, SelectField } from 'uniforms-semantic';
 import swal from 'sweetalert';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import PropTypes from 'prop-types';
