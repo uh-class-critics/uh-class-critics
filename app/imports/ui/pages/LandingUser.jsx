@@ -49,7 +49,7 @@ class LandingUser extends React.Component {
             <Grid.Row className='get-started'>
               <Grid.Column textAlign='center' >
                 <Button size = 'huge' className='button' animated color ='black'
-                  as={NavLink} exact to="/listprofessors">
+                  as={NavLink} exact to="/listprofessor">
                   <Button.Content hidden> <i className="arrow right icon"/> </Button.Content>
                   <Button.Content visible>Get Started Now!</Button.Content>
                 </Button>
