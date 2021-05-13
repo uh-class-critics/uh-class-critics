@@ -29,7 +29,7 @@ class Landing extends React.Component {
                 <Card.Content>
                   <Card.Meta>
                     <Icon name='address book outline'/>
-                    <a href="https://zijunhuang-1.github.io/">Portofolio</a>
+                    <a href="https://zijunhuang-1.github.io/">Portfolio</a>
                   </Card.Meta>
                   <Card.Meta>
                     <Icon name='github' />
@@ -64,7 +64,7 @@ class Landing extends React.Component {
                 <Card.Content>
                   <Card.Meta>
                     <Icon name='address book outline'/>
-                    <a href="https://johnsuelen.github.io/">Portofolio</a>
+                    <a href="https://johnsuelen.github.io/">Portfolio</a>
                   </Card.Meta>
                   <Card.Meta>
                     <Icon name='github' />
@@ -99,7 +99,7 @@ class Landing extends React.Component {
                 <Card.Content>
                   <Card.Meta>
                     <Icon name='address book outline'/>
-                    <a href="https://sle417.github.io/">Portofolio</a>
+                    <a href="https://sle417.github.io/">Portfolio</a>
                   </Card.Meta>
                   <Card.Meta>
                     <Icon name='github' />
@@ -134,7 +134,7 @@ class Landing extends React.Component {
                 <Card.Content>
                   <Card.Meta>
                     <Icon name='address book outline'/>
-                    <a href="https://acatarinaoaraujo.github.io/">Portofolio</a>
+                    <a href="https://acatarinaoaraujo.github.io/">Portfolio</a>
                   </Card.Meta>
                   <Card.Meta>
                     <Icon name='github' />
@@ -169,7 +169,7 @@ class Landing extends React.Component {
                 <Card.Content>
                   <Card.Meta>
                     <Icon name='address book outline'/>
-                    <a href="https://Johnny-Ho1.github.io">Portofolio</a>
+                    <a href="https://Johnny-Ho1.github.io">Portfolio</a>
                   </Card.Meta>
                   <Card.Meta>
                     <Icon name='github' />
