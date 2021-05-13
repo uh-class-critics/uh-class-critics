@@ -5,13 +5,6 @@ import { Professors } from '../../api/professors/Professors';
 import { Reviews } from '../../api/review/Reviews';
 import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
 
-Meteor.publish(Professors.userPublicationName, function () {
-  if (this.userId) {
-    return Professors.collection.find();
-  }
-  return this.ready();
-});
-
 Meteor.publish(ProfessorReviews.userPublicationName, function () {
   if (this.userId) {
     return ProfessorReviews.collection.find();
@@ -19,16 +12,16 @@ Meteor.publish(ProfessorReviews.userPublicationName, function () {
   return this.ready();
 });
 
-Meteor.publish(Reviews.userPublicationName, function () {
+Meteor.publish(Professors.userPublicationName, function () {
   if (this.userId) {
-    return Reviews.collection.find({});
+    return Professors.collection.find();
   }
   return this.ready();
 });
 
-Meteor.publish(ProfessorReviews.userPublicationName, function () {
+Meteor.publish(Reviews.userPublicationName, function () {
   if (this.userId) {
-    return ProfessorReviews.collection.find({});
+    return Reviews.collection.find({});
   }
   return this.ready();
 });

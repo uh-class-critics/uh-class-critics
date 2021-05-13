@@ -42,7 +42,7 @@ class ListProfessors extends React.Component {
             onChange={this.handleChange}/>
           <br/><br/><br/><br/>
           <Card.Group>
-            {sorted.map((professor, index) => <Professor key={index} professor={professor}/>)}
+            {sorted.map((professors, index) => <Professor key={index} professor={professors}/>)}
           </Card.Group>
         </Container>
       </div>
