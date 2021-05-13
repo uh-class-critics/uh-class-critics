@@ -58,9 +58,9 @@ ListProfessors.propTypes = {
 export default withTracker(() => {
   // Get access to Stuff documents.
   const subscription = Meteor.subscribe(Professors.userPublicationName);
-  const professors = Professors.collection.find({}).fetch();
+  const ready = subscription.ready();
   return {
-    professors,
-    ready: subscription.ready(),
+    professors: Professors.collection.find({}).fetch(),
+    ready,
   };
 })(ListProfessors);
