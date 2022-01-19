@@ -12,9 +12,11 @@ export default class Signout extends React.Component {
           <Grid centered>
             <Grid.Column width={3} className='signout-card'>
               <Card>
-                <Image src='/images/signout-card.jpg'/>
-                <Header as='h3' textAlign='center' attached><p>Successfully signed off.</p>
+                <Card.Content style={{ backgroundColor: '#09543C' }}>
+                  <Image src='/images/signout-card.jpg'/>
+                  <Header as='h3' textAlign='center' attached><p>Successfully signed off.</p>
                     Thank you for using  UH Class Critics</Header>
+                </Card.Content>
               </Card>
             </Grid.Column>
           </Grid>

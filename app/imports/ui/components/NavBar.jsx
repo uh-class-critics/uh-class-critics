@@ -17,7 +17,7 @@ class NavBar extends React.Component {
             <Button.Content hidden> Home Page</Button.Content>
             <Button.Content visible>
               <Image src='https://cdn.discordapp.com/attachments/828880920642977812/832133131271667722/123131321314142.png'
-                width = '75' height = '75'/>
+                width = '40' height = '40'/>
             </Button.Content>
           </Button>
 

@@ -8,7 +8,7 @@ class Course extends React.Component {
   render() {
     return (
       <Card centered>
-        <Card.Content>
+        <Card.Content style={{ backgroundColor: '#9ab5ad' }}>
           <Card.Header>
             <Link to={`/course/${this.props.course._id}`}>
               {this.props.course.courseName}
@@ -25,7 +25,7 @@ class Course extends React.Component {
           <br/>
           <Card.Header>
             <Header textAlign='center'>
-              <Button size='tiny' color='black' as={NavLink} exact to={`/course/${this.props.course._id}`}>Visit</Button>
+              <Button size='tiny' color='orange' as={NavLink} exact to={`/course/${this.props.course._id}`}>Read reviews on {this.props.course.courseName}</Button>
             </Header>
           </Card.Header>
         </Card.Content>

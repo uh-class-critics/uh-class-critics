@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Loader, Card, Image, Rating, Feed } from 'semantic-ui-react';
+import { Grid, Loader, Card, Image, Rating, Feed, Header, Icon } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -25,14 +25,14 @@ class ProfessorReview extends React.Component {
           <Grid.Column>
             <Card>
               <Image size='tiny' src={this.props.professor.image} wrapped ui={false}/>
-              <Card.Content>
+              <Card.Content style={{ backgroundColor: '#9ab5ad' }}>
                 <Card.Header>{this.props.professor.firstName} {this.props.professor.lastName}</Card.Header>
                 <Card.Meta>{this.props.professor.title}</Card.Meta>
                 <Card.Meta>office: {this.props.professor.office}</Card.Meta>
                 <br/>
                 <Card.Description>Courses Taught: {this.props.professor.course}</Card.Description>
               </Card.Content>
-              <Card.Content extra>
+              <Card.Content extra style={{ backgroundColor: '#09543C' }}>
                 <Rating disabled icon='star' maxRating={5} defaultRating={4}/>
               </Card.Content>
             </Card>
@@ -41,11 +41,12 @@ class ProfessorReview extends React.Component {
 
         <Grid.Column width={10}>
           <AddReview contactId={this.props.professor._id}/>
+          <br/>
+          <Header textAlign={'center'} as={'h3'}><Icon name={'arrow alternate circle down outline'}/>Reviews for {this.props.professor.firstName} {this.props.professor.lastName}</Header>
           <Card fluid>
-            <Card.Content>
-              <Card.Header>Reviews for {this.props.professor.firstName} {this.props.professor.lastName}</Card.Header>
+            <Card.Content style={{ backgroundColor: '#09543C' }}>
             </Card.Content>
-            <Card.Content>
+            <Card.Content style={{ backgroundColor: '#9ab5ad' }}>
               <Feed>
                 {filter.map((review, index) => <Review key={index} review={review}/>)}
               </Feed>

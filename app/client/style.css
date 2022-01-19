@@ -5,7 +5,7 @@
 }
 
 .body-landing-image {
-  background: no-repeat url("/images/landing-homepage.jpg");
+  background: scroll center  no-repeat url("/images/landing-homepage.jpg");
   background-size: 100%;
   width: 1920px;
   height: 1080px;
@@ -15,10 +15,8 @@
 }
 
 .body-landing-image-user {
-  background: no-repeat url("/images/landing-user.jpg");
+  background: scroll no-repeat url("/images/landing-user.jpg");
   background-size: 100%;
-  width: 1920px;
-  height: 960px;
   padding-top: 175px;
   margin-bottom: -40px;
   margin-top: 10px;
@@ -64,7 +62,7 @@
 
 .footer {
   padding-top: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 10px;
   background-color: #024731;
   color: white;
 }
@@ -101,4 +99,11 @@
 
 .professor-header {
   letter-spacing: 2px;
+}
+
+h1.ui.header, h2.ui.header, h3.ui.header, h4.ui.header {
+  font-family: "Lato", serif !important;
+  letter-spacing: 0.1rem;
+  color: whitesmoke;
+  font-weight: lighter;
 }

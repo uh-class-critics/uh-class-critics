@@ -47,6 +47,7 @@ class AddCourseAdmin extends React.Component {
       <Grid container centered>
         <Grid.Column width={8}>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
+            <br/>
             <Segment inverted padded style={{ backgroundColor: '#09543C' }}>
               <Header as="h3" textAlign="center" >Add a New Course to the System</Header>
               <Form.Group widths={'equal'}>

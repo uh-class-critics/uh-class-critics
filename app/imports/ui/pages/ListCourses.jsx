@@ -34,11 +34,10 @@ class ListCourses extends React.Component {
     const sorted = _.sortBy(allCoursesNames, 'courseName');
     return (
       <Container>
-        <Header as="h2" textAlign="center">Courses</Header>
-        <br/><br/>
+        <br/><Header as="h2" textAlign="center">Courses</Header><br/>
         <Input inverted type='text' size='large' placeholder='Search here...' icon='search' fluid
           onChange={this.handleChange}/>
-        <br/><br/><br/><br/>
+        <br/><br/>
         <Card.Group>
           {sorted.map((course, index) => <Course key={index} course={course} reviews={this.props.reviews.filter(review => (review.contactId === course._id))}/>)}
         </Card.Group>

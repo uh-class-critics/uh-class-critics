@@ -9,10 +9,10 @@ class Professor extends React.Component {
   render() {
     return (
       <Card centered>
-        <Card.Content>
+        <Card.Content style={{ backgroundColor: '#9ab5ad' }}>
           <Image
             floated='right'
-            size='mini'
+            size='tiny'
             src={this.props.professor.image}
           />
           <Card.Header>
@@ -27,7 +27,7 @@ class Professor extends React.Component {
           <br/>
           <Card.Header>
             <Header textAlign='center'>
-              <Button size='tiny' color='black' as={NavLink} exact to={`/professor/${this.props.professor._id}`}>Visit</Button>
+              <Button size='tiny' color='orange' as={NavLink} exact to={`/professor/${this.props.professor._id}`}>Read reviews on {this.props.professor.firstName}</Button>
             </Header>
           </Card.Header>
         </Card.Content>

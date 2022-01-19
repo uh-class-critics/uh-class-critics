@@ -35,11 +35,10 @@ class ListProfessors extends React.Component {
 
     return (
       <Container>
-        <Header as="h2" textAlign="center">Information & Computer Science Professors</Header>
-        <br/><br/>
+        <br/><Header as="h2" inverted textAlign="center">Professors</Header><br/>
         <Input inverted type='text' size='large' placeholder='Search here...' icon='search' fluid
           onChange={this.handleChange}/>
-        <br/><br/><br/><br/>
+        <br/><br/>
         <Card.Group>
           {sorted.map((professors, index) => <Professor key={index} professor={professors}/>)}
         </Card.Group>

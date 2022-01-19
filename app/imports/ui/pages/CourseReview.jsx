@@ -1,5 +1,5 @@
 import React from 'react';
-import { Grid, Loader, Card, Rating, Feed } from 'semantic-ui-react';
+import { Grid, Loader, Card, Rating, Feed, Header, Icon } from 'semantic-ui-react';
 import { Meteor } from 'meteor/meteor';
 import { withTracker } from 'meteor/react-meteor-data';
 import PropTypes from 'prop-types';
@@ -24,7 +24,7 @@ class CourseReview extends React.Component {
         <Grid.Column width={4}>
           <Grid.Column>
             <Card>
-              <Card.Content>
+              <Card.Content style={{ backgroundColor: '#9ab5ad' }}>
                 <Card.Header>{this.props.course.courseName}</Card.Header>
                 <Card.Meta>{this.props.course.title}</Card.Meta>
                 <br/>
@@ -43,7 +43,7 @@ class CourseReview extends React.Component {
                   <strong> Attributes:</strong> {this.props.course.attributes}
                 </Card.Description>
               </Card.Content>
-              <Card.Content extra>
+              <Card.Content extra style={{ backgroundColor: '#9ab5ad' }}>
                 <Rating disabled icon='star' maxRating={5} defaultRating={4}/>
               </Card.Content>
             </Card>
@@ -52,11 +52,12 @@ class CourseReview extends React.Component {
 
         <Grid.Column width={10}>
           <AddReview contactId={this.props.course._id}/>
+          <br/>
+          <Header textAlign={'center'} as={'h3'}><Icon name={'arrow alternate circle down outline'}/>Reviews for {this.props.course.courseName}</Header>
           <Card fluid>
-            <Card.Content>
-              <Card.Header>Reviews for {this.props.course.courseName}</Card.Header>
+            <Card.Content style={{ backgroundColor: '#9ab5ad' }}>
             </Card.Content>
-            <Card.Content>
+            <Card.Content extra style={{ backgroundColor: '#09543C' }}>
               <Feed>
                 {filter.map((review, index) => <Review key={index} review={review}/>)}
               </Feed>
