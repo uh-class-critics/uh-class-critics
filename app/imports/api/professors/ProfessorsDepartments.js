@@ -3,20 +3,15 @@ import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
 /** Encapsulates state and variable values for this collection. */
-class ProfessorsCollection {
+class ProfessorsDepartmentsCollection {
   constructor() {
     // The name of this collection.
-    this.name = 'ProfessorsCollection';
+    this.name = 'ProfessorsDepartmentsCollection';
     // Define the Mongo collection.
     this.collection = new Mongo.Collection(this.name);
     // Define the structure of each document in the collection.
     this.schema = new SimpleSchema({
-      firstName: String,
-      lastName: String,
-      image: String,
-      title: String,
-      course: String,
-      office: String,
+      professor: String,
       department: String,
     }, { tracker: Tracker });
     // Ensure collection documents obey schema.
@@ -27,4 +22,4 @@ class ProfessorsCollection {
   }
 }
 
-export const Professors = new ProfessorsCollection();
+export const ProfessorsDepartments = new ProfessorsDepartmentsCollection();

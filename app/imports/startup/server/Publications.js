@@ -4,6 +4,7 @@ import { Courses } from '../../api/course/Courses';
 import { Professors } from '../../api/professors/Professors';
 import { Reviews } from '../../api/review/Reviews';
 import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
+import { ProfessorsDepartments } from '../../api/professors/ProfessorsDepartments';
 
 Meteor.publish(ProfessorReviews.userPublicationName, function () {
   if (this.userId) {
