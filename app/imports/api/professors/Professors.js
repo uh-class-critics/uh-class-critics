@@ -2,6 +2,8 @@ import { Mongo } from 'meteor/mongo';
 import SimpleSchema from 'simpl-schema';
 import { Tracker } from 'meteor/tracker';
 
+export const teacherTitle = ['Assistant Professor', 'Associate Professor'];
+
 /** Encapsulates state and variable values for this collection. */
 class ProfessorsCollection {
   constructor() {

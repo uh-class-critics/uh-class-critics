@@ -1,18 +1,21 @@
 import React from 'react';
-import { Grid, Segment, Header } from 'semantic-ui-react';
-import { AutoForm, ErrorsField, SubmitField, TextField, LongTextField } from 'uniforms-semantic';
+import { Grid, Segment, Header, Form } from 'semantic-ui-react';
+import { AutoForm, ErrorsField, SelectField, TextField } from 'uniforms-semantic';
 import swal from 'sweetalert';
-// import { Meteor } from 'meteor/meteor';
 import SimpleSchema2Bridge from 'uniforms-bridge-simple-schema-2';
 import SimpleSchema from 'simpl-schema';
-import { Professors } from '../../api/professors/Professors';
+import { Professors, teacherTitle } from '../../api/professors/Professors';
 
 // Create a schema to specify the structure of the data to appear in the form.
 const formSchema = new SimpleSchema({
   firstName: String,
   lastName: String,
   image: String,
-  title: String,
+  title: {
+    type: String,
+    allowedValues: teacherTitle,
+    defaultValue: 'Associate Professor',
+  },
   course: String,
   office: String,
 });
@@ -20,7 +23,7 @@ const formSchema = new SimpleSchema({
 const bridge = new SimpleSchema2Bridge(formSchema);
 
 /** Renders the Page for adding a document. */
-class NewReview extends React.Component {
+class AddProfessorAdmin extends React.Component {
 
   // On submit, insert the data.
   submit(data, formRef) {
@@ -42,17 +45,19 @@ class NewReview extends React.Component {
     let fRef = null;
     return (
       <Grid container centered>
-        <Grid.Column>
-          <Header as="h2" textAlign="center" >Add a New Professor to the System</Header>
+        <Grid.Column width={8}>
           <AutoForm ref={ref => { fRef = ref; }} schema={bridge} onSubmit={data => this.submit(data, fRef)} >
-            <Segment>
-              <TextField name='firstName'/>
-              <TextField name='lastName'/>
-              <TextField name='image'/>
-              <TextField name='title'/>
-              <TextField name='office'/>
-              <LongTextField name ='course'/>
-              <SubmitField value='Submit'/>
+            <Segment inverted padded style={{ backgroundColor: '#09543C' }}>
+              <Header as="h3" textAlign="center" >Add a New Professor to the System</Header>
+              <Form.Group widths={'equal'}>
+                <TextField label='First Name' name='firstName'/>
+                <TextField label='Last Name' name='lastName'/>
+              </Form.Group>
+              <TextField name ='course' icon={'book'} placeholder='Ex: Biology'/>
+              <SelectField name='title'/>
+              <TextField name='office' icon={'building'} placeholder='Ex: POST 300'/>
+              <TextField label='Image URL' name='image' icon={'image outline'} placeholder='https://www.ics.hawaii.edu/uploads/image.jpg'/>
+              <Form.Button content="Submit" style={{ backgroundColor: '#356c5a', color: 'white' }} />
               <ErrorsField/>
             </Segment>
           </AutoForm>
@@ -62,4 +67,4 @@ class NewReview extends React.Component {
   }
 }
 
-export default NewReview;
+export default AddProfessorAdmin;
