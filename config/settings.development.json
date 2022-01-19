@@ -129,8 +129,7 @@
       "title": "Professor",
       "course": "ICS 314 Software Engineering I, ICS 491: Special Topics.",
       "image": "https://philipmjohnson.github.io/images/philip2.jpeg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     },
     {
       "firstName": "Henri",
@@ -138,8 +137,7 @@
       "title": "Professor",
       "course": "ICS 312 Machine-Level and Systems Programming, ICS 332 Operating Systems, ICS 332 Operating Systems",
       "image": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Henri_Casanova1.jpg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     },
     {
       "firstName": "Carleton",
@@ -147,8 +145,7 @@
       "title": "Assistant Professor",
       "course": "ICS 211 Intro to Computer Science II, ICS 314 Software Engineering I.",
       "image": "https://cammoore.github.io/images/cam-moore.jpg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     },
     {
       "firstName": "Jason",
@@ -156,8 +153,7 @@
       "title": "Professor",
       "course": "ICS 111 Intro to Computer Science I, ICS 685 Virtual and Augmented Reality.",
       "image": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Jason_Leigh-2014.jpg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     },
     {
       "firstName": "Kyungim",
@@ -165,8 +161,7 @@
       "title": "Associate Professor",
       "course": "ICS 241 Discrete Mathematics II, CS 483 Computer Vision.",
       "image": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/Kyungim_Baek1.jpg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     },
     {
       "firstName": "Kim",
@@ -174,8 +169,7 @@
       "title": "Professor",
       "course": "ICS 313 Programming Language Theory.",
       "image": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/kim_binsted-square-300x300.jpg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     },
     {
       "firstName": "Ravi",
@@ -183,8 +177,7 @@
       "title": "Professor",
       "course": "ICS 212: Program Structure, ICS 332: Operating Systems.",
       "image": "http://www.ics.hawaii.edu/wp-content/uploads/2013/08/Ravi_Narayan-2014.jpg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     },
     {
       "firstName": "Nodari",
@@ -192,8 +185,7 @@
       "title": "Ph.D. (2020)",
       "course": "ICS 621: Analysis of Algorithms, ICS 491: Competitive Programming, ICS 443: Parallel Algorithms.",
       "image": "https://www.ics.hawaii.edu/wp-content/uploads/2013/08/Nodari_Sitchinava-2014.jpg",
-      "office": "POST Building",
-      "department": "Information & Computer Sciences"
+      "office": "POST Building"
     }
   ],
 

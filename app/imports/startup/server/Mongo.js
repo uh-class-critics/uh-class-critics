@@ -2,7 +2,6 @@ import { Meteor } from 'meteor/meteor';
 import { Professors } from '../../api/professors/Professors';
 import { Courses } from '../../api/course/Courses';
 import { ProfessorReviews } from '../../api/professorReview/ProfessorReviews';
-import { ProfessorsDepartments } from '../../api/professors/ProfessorsDepartments';
 
 /* eslint-disable no-console */
 
