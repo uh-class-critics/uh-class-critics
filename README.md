@@ -1,15 +1,15 @@
 <h2 align="center">UH Class Critics</h2>
 <h4 align="center">A platform for rating professors at UH Manoa.</h4>
 <p align="center">
-    :star::star::star::star::star:
+    
 </p>
 
-### TECH STACK
+### Tech Stack
 <p align="center">
-<img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="Javascript" alt="Javascript" width="52" height="52"/>
-<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="NextJS" width="52" height="52"/>
-<img src="https://github.com/devicons/devicon/blob/master/icons/meteor/meteor-original.svg" title="Meteor" alt="Tailwind" width="52" height="52"/>
-<img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original-wordmark.svg" title="Mongodb" alt="Mongodb" width="52" height="52"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/javascript/javascript-original.svg" title="Javascript" alt="Javascript" width="40" height="40"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/react/react-original-wordmark.svg" title="React" alt="NextJS" width="40" height="40"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/meteor/meteor-original.svg" title="Meteor" alt="Tailwind" width="40" height="40"/>
+<img src="https://github.com/devicons/devicon/blob/master/icons/mongodb/mongodb-original-wordmark.svg" title="Mongodb" alt="Mongodb" width="40" height="40"/>
 </p>
 
 ![ci-badge](https://github.com/uh-class-critics/uh-class-critics/workflows/ci-uh-class-critics/badge.svg)
